@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.baidu.speech.recognizerdemo"
+    android:versionCode="15"
+    android:versionName="1.15.0808">
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="23" />
+
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+
+    <application
+        android:name="com.baidu.android.voicedemo.SpeakApp"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:screenOrientation="landscape"
+        android:theme="@style/AppTheme">
+        <uses-library android:name="android.test.runner" />
+
+        <activity
+            android:name="com.baidu.android.voicedemo.ui.MainActivity"
+            android:configChanges="orientation|keyboardHidden|screenLayout"
+            android:label="@string/main_title"
+            android:windowSoftInputMode="stateHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.baidu.speech.recognizerdemo.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.baidu.android.voicedemo.ui.MachineTypeActivity"
+            android:configChanges="orientation|keyboardHidden|screenLayout"
+            android:screenOrientation="landscape"></activity>
+        <activity
+            android:name="com.baidu.android.voicedemo.ui.NormalActivity"
+            android:configChanges="orientation|keyboardHidden|screenLayout"
+            android:screenOrientation="landscape"></activity>
+        <activity
+            android:name="com.baidu.android.voicedemo.ui.WelcomeActivity"
+            android:configChanges="orientation|keyboardHidden|screenLayout"
+            android:screenOrientation="landscape">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.baidu.android.voicedemo.ui.HomeActivity"
+            android:configChanges="orientation|keyboardHidden|screenLayout"
+            android:screenOrientation="landscape"></activity>
+        <activity android:name="com.baidu.android.voicedemo.ui.ShowDataActivity"></activity>
+        <activity android:name="com.baidu.android.voicedemo.ui.ExportExcelActivity"></activity>
+        <activity
+            android:name="com.baidu.android.voicedemo.ui.BuildPlanActivity"
+            android:configChanges="orientation|keyboardHidden|screenLayout"
+            android:screenOrientation="landscape"></activity>
+        <activity
+            android:name="com.baidu.android.voicedemo.ui.BaseActivity"
+            android:label="@string/title_activity_base"></activity>
+        <activity android:name="com.baidu.android.voicedemo.ui.DonePlanListActivity"></activity>
+        <activity
+            android:name="com.baidu.android.voicedemo.ui.UnDonePlanListActivity"
+            android:theme="@style/MyAppTheme"></activity>
+        <activity android:name="com.baidu.android.voicedemo.ui.ViewdoneRecordActivity"></activity>
+        <activity android:name="com.baidu.android.voicedemo.ui.ViewRecordItemActivity"></activity>
+        <activity
+            android:name="com.baidu.android.voicedemo.ui.FailRecordHandActivity"
+            android:screenOrientation="landscape"></activity>
+        <activity android:name="com.baidu.android.voicedemo.ui.EditPlanActivity"></activity>
+        <activity android:name="com.baidu.android.voicedemo.ui.admin.AdminRegisterActivity"></activity>
+        <activity android:name="com.baidu.android.voicedemo.ui.admin.AdminHomeActivity"></activity>
+        <activity android:name="com.baidu.android.voicedemo.ui.admin.AdminLoginActivity"></activity>
+        <activity android:name="com.baidu.android.voicedemo.ui.admin.EditPasswordActivity"></activity>
+        <activity android:name="com.baidu.android.voicedemo.ui.user.UserLoginActivity"></activity>
+        <activity android:name="com.baidu.android.voicedemo.ui.user.UserRegisterActivity"></activity>
+        <activity android:name="com.baidu.android.voicedemo.ui.TestActivity"></activity>
+        <activity android:name="com.baidu.android.voicedemo.ui.admin.UserManageActivity"></activity>
+    </application>
+
+</manifest>
