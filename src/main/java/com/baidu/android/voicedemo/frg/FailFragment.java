@@ -45,6 +45,8 @@ public class FailFragment extends Fragment {
     MyRecordAdapter myAdapter;
     List<Record> initlist;//原始的所有数据
 
+    private static final String TAG = "FailFragment";
+
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.frg_fail, null);
@@ -145,7 +147,7 @@ public class FailFragment extends Fragment {
                 if (!key.contains(record.getOrderId() + ":" + record.getProduceIndex())) {
                     result.add(record);
                     key.add(record.getOrderId() + ":" + record.getProduceIndex());
-                    Log.e("tag", "add  " + record.getOrderId() + ":" + record.getProduceIndex());
+                    Log.e(TAG, "add  " + record.getOrderId() + ":" + record.getProduceIndex());
                 }
             }
         }
@@ -154,18 +156,20 @@ public class FailFragment extends Fragment {
 
     @Subscribe(threadMode = ThreadMode.MAIN)
     public void onEventMainThread(ReflashEvent command) {
-        Log.e("tang", "onEventMainThread----failfragment : " + command.getOrderId());
+        Log.e(TAG, "onEventMainThread----failfragment : " + command.getOrderId());
         if (command.getCommondId() == StaticUtils.COMMAND_REFLASH) {
             initFailListView();
             //除了刷新界面之外，还需要刷新一下plan的数据库
             List<Record> tmpList = DbHelper.getInstance(getActivity()).getAllInitRecord(command.getOrderId());
             if (tmpList != null && tmpList.size() > 0) {
-                Log.e("tang", "onEventMainThread----tmplist != null");
+                Log.e(TAG, "onEventMainThread----该订单还有record "+tmpList.size());
             } else {
                 //此orderId的plan的done应update为true
                 boolean b = DbHelper.getInstance(getActivity()).updatePlanByOrderId(command.getOrderId());
-                Log.e("tang", "onEventMainThread----更新orderid为" + command.getOrderId() + "的plan成功");
-                EventBusUtils.sendCommand(StaticUtils.COMMAND_REFLASH_PLAN);
+                Log.e(TAG, "onEventMainThread----更新orderid为" + command.getOrderId() + "的plan成功");
+                if(b){
+                    EventBusUtils.sendCommand(StaticUtils.COMMAND_REFLASH_PLAN);
+                }
             }
         }
     }

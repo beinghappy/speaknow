@@ -395,7 +395,6 @@ public class BuildPlanActivity extends AppCompatActivity {
                     record.setOrderSuffix(plan.getOrderSuffix());
                     record.setMachinetype(plan.getMachineType());
                     record.setLevel(groudId);
-                    Log.e("tag:tang", "index==" + record.getProduceIndex()+",getLevel =="+record.getLevel());
                     //更新添加线、时间、甚至worker
                     record.setLine(plan.getProduceClass()+"课"+plan.getProduceLine()+"线");
                     record.setCheckDate(FormatUtils.formatNowTime());
@@ -405,9 +404,11 @@ public class BuildPlanActivity extends AppCompatActivity {
                         //正常一组一组
                         record.setResult(Record.result_init);
                         record.setTail(false);
+                        Log.e("tag:tang", "正常 index==" + record.getProduceIndex()+",getLevel =="+record.getLevel());
                     }else{
                         //尾数
-                        record.setResult(Record.result_init);
+                        Log.e("tag:tang", "尾数 index==" + record.getProduceIndex()+",getLevel =="+record.getLevel());
+                        record.setResult(Record.result_fail);
                         record.setTail(true);
                     }
                     //update by long.tang for "2017-7-13 第一条"

@@ -14,9 +14,12 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.baidu.android.voicedemo.bean.UserInfo;
+import com.baidu.android.voicedemo.bean.UserManagerEvent;
 import com.baidu.android.voicedemo.db.DbHelper;
 import com.baidu.android.voicedemo.utils.StaticUtils;
 import com.baidu.speech.recognizerdemo.R;
+
+import org.greenrobot.eventbus.EventBus;
 
 /**
  * A login screen that offers login via email/password.
@@ -76,6 +79,7 @@ public class UserRegisterActivity extends Activity {
         boolean b = DbHelper.getInstance(this).addUserInfo(mInfo);
         if(b){
             Toast.makeText(this,"注册成功",Toast.LENGTH_LONG).show();
+            EventBus.getDefault().post(new UserManagerEvent());
             finish();
         }else{
             Toast.makeText(this,"注册失败，请联系管理员",Toast.LENGTH_LONG).show();

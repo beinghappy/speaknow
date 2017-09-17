@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+        <item android:id="@+id/undone"
+              android:title="未完成"
+              android:visible="true"
+              app:showAsAction="always"/>
+
+        <item android:id="@+id/fail"
+              android:title="残次品"
+              android:visible="true"
+              app:showAsAction="always"/>
+</menu>

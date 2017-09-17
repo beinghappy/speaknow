@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+
+    <color name="colorWhite">#FFFFFFFF</color>
+
+
+    <color name="lightwhite">#ddd</color>
+    <color name="white">#fff</color>
+    <color name="light_green">#080</color>
+    <color name="font_green">#ff8019</color>
+    <color name="font_black">#313131</color>
+    <color name="font_green_old">#0b0</color>
+    <color name="font_black_old">#000</color>
+    <color name="transparent">#0000</color>
+
+    <!-- bottom color -->
+    <color name="bottom_white">#ff7200</color>
+    <color name="bottom_listtab_off">#999999</color>
+
+    <!-- v7 -->
+    <color name="red">#FF0000</color>
+    <color name="black">#000000</color>
+    <color name="blue">#0000FF</color>
+    <color name="lightblue">#ADD8E6</color>
+    <color name="skyblue">#87CEEB</color>
+
+
+    <!-- background -->
+    <color name="bg_gray">#ebebeb</color>
+    <color name="viewpage_gray">#ffffff</color>
+
+    <color name="actionbar_bg">#33b63c</color>
+
+
+    <color name="pink">#fc4226</color>
+    <color name="divider">#c5c5c5</color>
+
+</resources>

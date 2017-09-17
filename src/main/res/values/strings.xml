@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">血压记录系统</string>
+    <string name="please_speak">请说话</string>
+    <string name="speaking">说话中</string>
+    <string name="cancel">取消</string>
+    <string name="start">开始</string>
+    <string name="setting">设置</string>
+
+
+    <string name="prompt_email">工号</string>
+    <string name="prompt_password">密码</string>
+    <string name="prompt_new_password">新密码</string>
+    <string name="prompt_re_new_password">重复新密码</string>
+    <string name="prompt_repassword">重复密码</string>
+    <string name="action_sign_in">登录</string>
+    <string name="action_submit">提交</string>
+    <string name="action_cancel">取消</string>
+    <string name="action_register">注册</string>
+    <string name="action_sign_in_short">登录</string>
+    <string name="error_invalid_email">工号非法</string>
+    <string name="error_invalid_password">密码太短</string>
+    <string name="error_different_password">密码不一致</string>
+    <string name="error_incorrect_password">密码不正确</string>
+    <string name="error_field_required">该选项必填</string>
+
+
+    <string name="infile_default"></string>
+    <string-array name="infile_list">
+        <item>@string/infile_default</item>
+        <item>res:///com/baidu/android/voicedemo/8k_test.pcm, 8k采样的测试音频</item>
+        <item>res:///com/baidu/android/voicedemo/16k_test.pcm, 16k采样的测试音频</item>
+    </string-array>
+
+    <string-array name="time_space_list">
+        <item>1s</item>
+        <item>2s</item>
+        <item>3s</item>
+    </string-array>
+
+    <string name="sample_default"></string>
+    <string-array name="sample_list">
+        <item>@string/sample_default</item>
+        <item>8000, 适用于2G或3G网络</item>
+        <item>16000, 适用于4G或WIFI网络</item>
+    </string-array>
+
+    <string name="language_default"></string>
+    <string-array name="language">
+        <item>@string/language_default</item>
+        <item>cmn-Hans-CN, 普通话(中国)</item>
+        <item>sichuan-Hans-CN, 四川(中国)</item>
+        <item>yue-Hans-CN, 粤语(中国)</item>
+        <item>en-GB, 英语(美国)</item>
+    </string-array>
+
+    <string name="nlu_default"></string>
+    <string-array name="nlu_list">
+        <item>@string/nlu_default</item>
+        <item>disable, 禁用语义解析</item>
+        <item>enable, 开启语义解析</item>
+    </string-array>
+
+    <string-array name="position_list">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+    <string-array name="produce_class_list">
+        <item>制一</item>
+        <item>制二</item>
+        <item>制三</item>
+        <item>制四</item>
+    </string-array>
+    <string-array name="produce_line_list">
+        <item>A</item>
+        <item>B</item>
+        <item>C</item>
+        <item>D</item>
+        <item>E</item>
+        <item>F</item>
+        <item>H</item>
+    </string-array>
+
+    <string name="vad_default"></string>
+    <string-array name="vad_list">
+        <item>@string/vad_default</item>
+        <item>search, 适用输入搜索关键字(默认值)</item>
+        <item>input, 适用于输入短信、微博等长句输入</item>
+        <item>model-vad, 抗噪声能力强, 但需要依赖较大的资源包</item>
+    </string-array>
+    <string name="prop_default"></string>
+    <string-array name="prop_tpye">
+        <item>@string/prop_default</item>
+        <item>20000, 输入</item>
+        <item>10005, 热词</item>
+        <item>10060, 地图</item>
+        <item>10001, 音乐</item>
+        <item>10002, 视频</item>
+        <item>10003, 应用</item>
+        <item>10004, 网页</item>
+        <item>10007, 健康</item>
+        <item>10006, 购物</item>
+        <item>10008, 打电话</item>
+        <item>10008, 超级电话</item>
+        <item>10052, 医疗</item>
+        <item>10053, 汽车</item>
+        <item>10054, 娱乐餐饮</item>
+        <item>10055, 财经</item>
+        <item>10056, 游戏</item>
+        <item>10057, 菜谱</item>
+        <item>10058, 助手</item>
+        <item>100014, 联系人</item>
+        <item>100016, 手机设置</item>
+        <item>100018, 电视指令</item>
+        <item>100019, 播放器指令</item>
+        <item>100020, 收音机指令</item>
+        <item>100021, 命令词</item>
+    </string-array>
+    <string name="title_item_list">Items</string>
+    <string name="title_item_detail">Item Detail</string>
+
+    <string-array name="items_list">
+        <item>新建检测计划</item>
+        <item>正在进行的计划</item>
+        <item>已完成的计划</item>
+    </string-array>
+
+    <string-array name="plan_list_functions">
+        <item>导出</item>
+        <item>详情</item>
+        <item>删除</item>
+    </string-array>
+
+    <string-array name="plan_list_functions_user">
+        <item>导出</item>
+        <item>详情</item>
+    </string-array>
+
+    <string-array name="done_plan_list_functions">
+        <item>详情</item>
+        <item>导出</item>
+        <item>删除</item>
+    </string-array>
+
+    <string-array name="done_plan_list_functions_user">
+        <item>详情</item>
+        <item>导出</item>
+    </string-array>
+
+    <string-array name="items_desc_list">
+        <item>新建检测计划的描述</item>
+        <item>正在进行的计划的描述</item>
+        <item>已完成的计划的描述</item>
+    </string-array>
+    <string name="title_activity_base">BaseActivity</string>
+    <string name="pay_title">请输入支付密码</string>
+    <string name="pay_sure">确认支付</string>
+    <string name="pay_cancel">取消</string>
+    <string name="pay_content">消费金额：34.50元</string>
+    <string name="main_title">数据输入中</string>
+    <string name="deselect_all">取消</string>
+    <string name="select_all">全选</string>
+
+</resources>

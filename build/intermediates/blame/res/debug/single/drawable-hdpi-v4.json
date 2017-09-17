@@ -1,0 +1,330 @@
+[
+    {
+        "merged": "G:\\android_studio\\studio_workspace\\Other\\SpeechNow\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\bdspeech_help_pressed_deep.png",
+        "source": "G:\\android_studio\\studio_workspace\\Other\\SpeechNow\\src\\main\\res\\drawable-hdpi\\bdspeech_help_pressed_deep.png"
+    },
+    {
+        "merged": "G:\\android_studio\\studio_workspace\\Other\\SpeechNow\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\bdspeech_mask_light.png",
+        "source": "G:\\android_studio\\studio_workspace\\Other\\SpeechNow\\src\\main\\res\\drawable-hdpi\\bdspeech_mask_light.png"
+    },
+    {
+        "merged": "G:\\android_studio\\studio_workspace\\Other\\SpeechNow\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_menu_hardkey_panel_mtrl_mult.9.png",
+        "source": "G:\\android_studio\\studio_workspace\\Other\\SpeechNow\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\drawable-hdpi\\abc_menu_hardkey_panel_mtrl_mult.9.png"
+    },
+    {
+        "merged": "G:\\android_studio\\studio_workspace\\Other\\SpeechNow\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\keyboard_seven_press.png",
+        "source": "G:\\android_studio\\studio_workspace\\Other\\SpeechNow\\src\\main\\res\\drawable-hdpi\\keyboard_seven_press.png"
+    },
+    {
+        "merged": "G:\\android_studio\\studio_workspace\\Other\\SpeechNow\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\keyboard_space_press.png",
+        "source": "G:\\android_studio\\studio_workspace\\Other\\SpeechNow\\src\\main\\res\\drawable-hdpi\\keyboard_space_press.png"
+    },
+    {
+        "merged": "G:\\android_studio\\studio_workspace\\Other\\SpeechNow\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\bdspeech_help_deep.png",
+        "source": "G:\\android_studio\\studio_workspace\\Other\\SpeechNow\\src\\main\\res\\drawable-hdpi\\bdspeech_help_deep.png"
+    },
+    {
+        "merged": "G:\\android_studio\\studio_workspace\\Other\\SpeechNow\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\edittext_bg_nor.9.png",
+        "source": "G:\\android_studio\\studio_workspace\\Other\\SpeechNow\\src\\main\\res\\drawable-hdpi\\edittext_bg_nor.9.png"
+    },
+    {
+        "merged": "G:\\android_studio\\studio_workspace\\Other\\SpeechNow\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\keyboard_three_press.png",
+        "source": "G:\\android_studio\\studio_workspace\\Other\\SpeechNow\\src\\main\\res\\drawable-hdpi\\keyboard_three_press.png"
+    },
+    {
+        "merged": "G:\\android_studio\\studio_workspace\\Other\\SpeechNow\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_list_pressed_holo_light.9.png",
+        "source": "G:\\android_studio\\studio_workspace\\Other\\SpeechNow\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\drawable-hdpi\\abc_list_pressed_holo_light.9.png"
+    },
+    {
+        "merged": "G:\\android_studio\\studio_workspace\\Other\\SpeechNow\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_textfield_search_default_mtrl_alpha.9.png",
+        "source": "G:\\android_studio\\studio_workspace\\Other\\SpeechNow\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\drawable-hdpi\\abc_textfield_search_default_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "G:\\android_studio\\studio_workspace\\Other\\SpeechNow\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_btn_check_to_on_mtrl_015.png",
+        "source": "G:\\android_studio\\studio_workspace\\Other\\SpeechNow\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\drawable-hdpi\\abc_btn_check_to_on_mtrl_015.png"
+    },
+    {
+        "merged": "G:\\android_studio\\studio_workspace\\Other\\SpeechNow\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_textfield_default_mtrl_alpha.9.png",
+        "source": "G:\\android_studio\\studio_workspace\\Other\\SpeechNow\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\drawable-hdpi\\abc_textfield_default_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "G:\\android_studio\\studio_workspace\\Other\\SpeechNow\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\bdspeech_help_light.png",
+        "source": "G:\\android_studio\\studio_workspace\\Other\\SpeechNow\\src\\main\\res\\drawable-hdpi\\bdspeech_help_light.png"
+    },
+    {
+        "merged": "G:\\android_studio\\studio_workspace\\Other\\SpeechNow\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\keyboard_eight.png",
+        "source": "G:\\android_studio\\studio_workspace\\Other\\SpeechNow\\src\\main\\res\\drawable-hdpi\\keyboard_eight.png"
+    },
+    {
+        "merged": "G:\\android_studio\\studio_workspace\\Other\\SpeechNow\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\filedialog_root.png",
+        "source": "G:\\android_studio\\studio_workspace\\Other\\SpeechNow\\src\\main\\res\\drawable-hdpi\\filedialog_root.png"
+    },
+    {
+        "merged": "G:\\android_studio\\studio_workspace\\Other\\SpeechNow\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_cab_background_top_mtrl_alpha.9.png",
+        "source": "G:\\android_studio\\studio_workspace\\Other\\SpeechNow\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\drawable-hdpi\\abc_cab_background_top_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "G:\\android_studio\\studio_workspace\\Other\\SpeechNow\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\filedialog_file.png",
+        "source": "G:\\android_studio\\studio_workspace\\Other\\SpeechNow\\src\\main\\res\\drawable-hdpi\\filedialog_file.png"
+    },
+    {
+        "merged": "G:\\android_studio\\studio_workspace\\Other\\SpeechNow\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\keyboard_two_press.png",
+        "source": "G:\\android_studio\\studio_workspace\\Other\\SpeechNow\\src\\main\\res\\drawable-hdpi\\keyboard_two_press.png"
+    },
+    {
+        "merged": "G:\\android_studio\\studio_workspace\\Other\\SpeechNow\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_list_selector_disabled_holo_dark.9.png",
+        "source": "G:\\android_studio\\studio_workspace\\Other\\SpeechNow\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\drawable-hdpi\\abc_list_selector_disabled_holo_dark.9.png"
+    },
+    {
+        "merged": "G:\\android_studio\\studio_workspace\\Other\\SpeechNow\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\filedialog_wavfile.png",
+        "source": "G:\\android_studio\\studio_workspace\\Other\\SpeechNow\\src\\main\\res\\drawable-hdpi\\filedialog_wavfile.png"
+    },
+    {
+        "merged": "G:\\android_studio\\studio_workspace\\Other\\SpeechNow\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_list_longpressed_holo.9.png",
+        "source": "G:\\android_studio\\studio_workspace\\Other\\SpeechNow\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\drawable-hdpi\\abc_list_longpressed_holo.9.png"
+    },
+    {
+        "merged": "G:\\android_studio\\studio_workspace\\Other\\SpeechNow\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\keyboard_four.png",
+        "source": "G:\\android_studio\\studio_workspace\\Other\\SpeechNow\\src\\main\\res\\drawable-hdpi\\keyboard_four.png"
+    },
+    {
+        "merged": "G:\\android_studio\\studio_workspace\\Other\\SpeechNow\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_list_divider_mtrl_alpha.9.png",
+        "source": "G:\\android_studio\\studio_workspace\\Other\\SpeechNow\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\drawable-hdpi\\abc_list_divider_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "G:\\android_studio\\studio_workspace\\Other\\SpeechNow\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\keyboard_zero_press.png",
+        "source": "G:\\android_studio\\studio_workspace\\Other\\SpeechNow\\src\\main\\res\\drawable-hdpi\\keyboard_zero_press.png"
+    },
+    {
+        "merged": "G:\\android_studio\\studio_workspace\\Other\\SpeechNow\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_btn_switch_to_on_mtrl_00001.9.png",
+        "source": "G:\\android_studio\\studio_workspace\\Other\\SpeechNow\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\drawable-hdpi\\abc_btn_switch_to_on_mtrl_00001.9.png"
+    },
+    {
+        "merged": "G:\\android_studio\\studio_workspace\\Other\\SpeechNow\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\keyboard_seven.png",
+        "source": "G:\\android_studio\\studio_workspace\\Other\\SpeechNow\\src\\main\\res\\drawable-hdpi\\keyboard_seven.png"
+    },
+    {
+        "merged": "G:\\android_studio\\studio_workspace\\Other\\SpeechNow\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\keyboard_eight_press.png",
+        "source": "G:\\android_studio\\studio_workspace\\Other\\SpeechNow\\src\\main\\res\\drawable-hdpi\\keyboard_eight_press.png"
+    },
+    {
+        "merged": "G:\\android_studio\\studio_workspace\\Other\\SpeechNow\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_ic_menu_copy_mtrl_am_alpha.png",
+        "source": "G:\\android_studio\\studio_workspace\\Other\\SpeechNow\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\drawable-hdpi\\abc_ic_menu_copy_mtrl_am_alpha.png"
+    },
+    {
+        "merged": "G:\\android_studio\\studio_workspace\\Other\\SpeechNow\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_ic_voice_search_api_mtrl_alpha.png",
+        "source": "G:\\android_studio\\studio_workspace\\Other\\SpeechNow\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\drawable-hdpi\\abc_ic_voice_search_api_mtrl_alpha.png"
+    },
+    {
+        "merged": "G:\\android_studio\\studio_workspace\\Other\\SpeechNow\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_btn_check_to_on_mtrl_000.png",
+        "source": "G:\\android_studio\\studio_workspace\\Other\\SpeechNow\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\drawable-hdpi\\abc_btn_check_to_on_mtrl_000.png"
+    },
+    {
+        "merged": "G:\\android_studio\\studio_workspace\\Other\\SpeechNow\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\keyboard_space.png",
+        "source": "G:\\android_studio\\studio_workspace\\Other\\SpeechNow\\src\\main\\res\\drawable-hdpi\\keyboard_space.png"
+    },
+    {
+        "merged": "G:\\android_studio\\studio_workspace\\Other\\SpeechNow\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\bdspeech_help_pressed_light.png",
+        "source": "G:\\android_studio\\studio_workspace\\Other\\SpeechNow\\src\\main\\res\\drawable-hdpi\\bdspeech_help_pressed_light.png"
+    },
+    {
+        "merged": "G:\\android_studio\\studio_workspace\\Other\\SpeechNow\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_btn_radio_to_on_mtrl_015.png",
+        "source": "G:\\android_studio\\studio_workspace\\Other\\SpeechNow\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\drawable-hdpi\\abc_btn_radio_to_on_mtrl_015.png"
+    },
+    {
+        "merged": "G:\\android_studio\\studio_workspace\\Other\\SpeechNow\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\sex_boxline_bg.png",
+        "source": "G:\\android_studio\\studio_workspace\\Other\\SpeechNow\\src\\main\\res\\drawable-hdpi\\sex_boxline_bg.png"
+    },
+    {
+        "merged": "G:\\android_studio\\studio_workspace\\Other\\SpeechNow\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_list_pressed_holo_dark.9.png",
+        "source": "G:\\android_studio\\studio_workspace\\Other\\SpeechNow\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\drawable-hdpi\\abc_list_pressed_holo_dark.9.png"
+    },
+    {
+        "merged": "G:\\android_studio\\studio_workspace\\Other\\SpeechNow\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_ab_share_pack_mtrl_alpha.9.png",
+        "source": "G:\\android_studio\\studio_workspace\\Other\\SpeechNow\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\drawable-hdpi\\abc_ab_share_pack_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "G:\\android_studio\\studio_workspace\\Other\\SpeechNow\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\filedialog_folder_up.png",
+        "source": "G:\\android_studio\\studio_workspace\\Other\\SpeechNow\\src\\main\\res\\drawable-hdpi\\filedialog_folder_up.png"
+    },
+    {
+        "merged": "G:\\android_studio\\studio_workspace\\Other\\SpeechNow\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_ic_commit_search_api_mtrl_alpha.png",
+        "source": "G:\\android_studio\\studio_workspace\\Other\\SpeechNow\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\drawable-hdpi\\abc_ic_commit_search_api_mtrl_alpha.png"
+    },
+    {
+        "merged": "G:\\android_studio\\studio_workspace\\Other\\SpeechNow\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\bdspeech_close_v2.png",
+        "source": "G:\\android_studio\\studio_workspace\\Other\\SpeechNow\\src\\main\\res\\drawable-hdpi\\bdspeech_close_v2.png"
+    },
+    {
+        "merged": "G:\\android_studio\\studio_workspace\\Other\\SpeechNow\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_textfield_activated_mtrl_alpha.9.png",
+        "source": "G:\\android_studio\\studio_workspace\\Other\\SpeechNow\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\drawable-hdpi\\abc_textfield_activated_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "G:\\android_studio\\studio_workspace\\Other\\SpeechNow\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_switch_track_mtrl_alpha.9.png",
+        "source": "G:\\android_studio\\studio_workspace\\Other\\SpeechNow\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\drawable-hdpi\\abc_switch_track_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "G:\\android_studio\\studio_workspace\\Other\\SpeechNow\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\sex_box_bg.9.png",
+        "source": "G:\\android_studio\\studio_workspace\\Other\\SpeechNow\\src\\main\\res\\drawable-hdpi\\sex_box_bg.9.png"
+    },
+    {
+        "merged": "G:\\android_studio\\studio_workspace\\Other\\SpeechNow\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_ic_menu_share_mtrl_alpha.png",
+        "source": "G:\\android_studio\\studio_workspace\\Other\\SpeechNow\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\drawable-hdpi\\abc_ic_menu_share_mtrl_alpha.png"
+    },
+    {
+        "merged": "G:\\android_studio\\studio_workspace\\Other\\SpeechNow\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\pencil.png",
+        "source": "G:\\android_studio\\studio_workspace\\Other\\SpeechNow\\src\\main\\res\\drawable-hdpi\\pencil.png"
+    },
+    {
+        "merged": "G:\\android_studio\\studio_workspace\\Other\\SpeechNow\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\bdspeech_mask_deep.png",
+        "source": "G:\\android_studio\\studio_workspace\\Other\\SpeechNow\\src\\main\\res\\drawable-hdpi\\bdspeech_mask_deep.png"
+    },
+    {
+        "merged": "G:\\android_studio\\studio_workspace\\Other\\SpeechNow\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\keyboard_sex_press.png",
+        "source": "G:\\android_studio\\studio_workspace\\Other\\SpeechNow\\src\\main\\res\\drawable-hdpi\\keyboard_sex_press.png"
+    },
+    {
+        "merged": "G:\\android_studio\\studio_workspace\\Other\\SpeechNow\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\keyboard_five_press.png",
+        "source": "G:\\android_studio\\studio_workspace\\Other\\SpeechNow\\src\\main\\res\\drawable-hdpi\\keyboard_five_press.png"
+    },
+    {
+        "merged": "G:\\android_studio\\studio_workspace\\Other\\SpeechNow\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_ic_menu_moreoverflow_mtrl_alpha.png",
+        "source": "G:\\android_studio\\studio_workspace\\Other\\SpeechNow\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\drawable-hdpi\\abc_ic_menu_moreoverflow_mtrl_alpha.png"
+    },
+    {
+        "merged": "G:\\android_studio\\studio_workspace\\Other\\SpeechNow\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\editext_bg_press.9.png",
+        "source": "G:\\android_studio\\studio_workspace\\Other\\SpeechNow\\src\\main\\res\\drawable-hdpi\\editext_bg_press.9.png"
+    },
+    {
+        "merged": "G:\\android_studio\\studio_workspace\\Other\\SpeechNow\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\keyboard_sex.png",
+        "source": "G:\\android_studio\\studio_workspace\\Other\\SpeechNow\\src\\main\\res\\drawable-hdpi\\keyboard_sex.png"
+    },
+    {
+        "merged": "G:\\android_studio\\studio_workspace\\Other\\SpeechNow\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\keyboard_del.png",
+        "source": "G:\\android_studio\\studio_workspace\\Other\\SpeechNow\\src\\main\\res\\drawable-hdpi\\keyboard_del.png"
+    },
+    {
+        "merged": "G:\\android_studio\\studio_workspace\\Other\\SpeechNow\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_list_focused_holo.9.png",
+        "source": "G:\\android_studio\\studio_workspace\\Other\\SpeechNow\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\drawable-hdpi\\abc_list_focused_holo.9.png"
+    },
+    {
+        "merged": "G:\\android_studio\\studio_workspace\\Other\\SpeechNow\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\keyboard_one.png",
+        "source": "G:\\android_studio\\studio_workspace\\Other\\SpeechNow\\src\\main\\res\\drawable-hdpi\\keyboard_one.png"
+    },
+    {
+        "merged": "G:\\android_studio\\studio_workspace\\Other\\SpeechNow\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_btn_rating_star_off_mtrl_alpha.png",
+        "source": "G:\\android_studio\\studio_workspace\\Other\\SpeechNow\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\drawable-hdpi\\abc_btn_rating_star_off_mtrl_alpha.png"
+    },
+    {
+        "merged": "G:\\android_studio\\studio_workspace\\Other\\SpeechNow\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_btn_radio_to_on_mtrl_000.png",
+        "source": "G:\\android_studio\\studio_workspace\\Other\\SpeechNow\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\drawable-hdpi\\abc_btn_radio_to_on_mtrl_000.png"
+    },
+    {
+        "merged": "G:\\android_studio\\studio_workspace\\Other\\SpeechNow\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_ic_menu_selectall_mtrl_alpha.png",
+        "source": "G:\\android_studio\\studio_workspace\\Other\\SpeechNow\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\drawable-hdpi\\abc_ic_menu_selectall_mtrl_alpha.png"
+    },
+    {
+        "merged": "G:\\android_studio\\studio_workspace\\Other\\SpeechNow\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_list_selector_disabled_holo_light.9.png",
+        "source": "G:\\android_studio\\studio_workspace\\Other\\SpeechNow\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\drawable-hdpi\\abc_list_selector_disabled_holo_light.9.png"
+    },
+    {
+        "merged": "G:\\android_studio\\studio_workspace\\Other\\SpeechNow\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_btn_rating_star_on_mtrl_alpha.png",
+        "source": "G:\\android_studio\\studio_workspace\\Other\\SpeechNow\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\drawable-hdpi\\abc_btn_rating_star_on_mtrl_alpha.png"
+    },
+    {
+        "merged": "G:\\android_studio\\studio_workspace\\Other\\SpeechNow\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_popup_background_mtrl_mult.9.png",
+        "source": "G:\\android_studio\\studio_workspace\\Other\\SpeechNow\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\drawable-hdpi\\abc_popup_background_mtrl_mult.9.png"
+    },
+    {
+        "merged": "G:\\android_studio\\studio_workspace\\Other\\SpeechNow\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_ic_ab_back_mtrl_am_alpha.png",
+        "source": "G:\\android_studio\\studio_workspace\\Other\\SpeechNow\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\drawable-hdpi\\abc_ic_ab_back_mtrl_am_alpha.png"
+    },
+    {
+        "merged": "G:\\android_studio\\studio_workspace\\Other\\SpeechNow\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\keyboard_two.png",
+        "source": "G:\\android_studio\\studio_workspace\\Other\\SpeechNow\\src\\main\\res\\drawable-hdpi\\keyboard_two.png"
+    },
+    {
+        "merged": "G:\\android_studio\\studio_workspace\\Other\\SpeechNow\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\keyboard_del_press.png",
+        "source": "G:\\android_studio\\studio_workspace\\Other\\SpeechNow\\src\\main\\res\\drawable-hdpi\\keyboard_del_press.png"
+    },
+    {
+        "merged": "G:\\android_studio\\studio_workspace\\Other\\SpeechNow\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_ic_menu_paste_mtrl_am_alpha.png",
+        "source": "G:\\android_studio\\studio_workspace\\Other\\SpeechNow\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\drawable-hdpi\\abc_ic_menu_paste_mtrl_am_alpha.png"
+    },
+    {
+        "merged": "G:\\android_studio\\studio_workspace\\Other\\SpeechNow\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_btn_switch_to_on_mtrl_00012.9.png",
+        "source": "G:\\android_studio\\studio_workspace\\Other\\SpeechNow\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\drawable-hdpi\\abc_btn_switch_to_on_mtrl_00012.9.png"
+    },
+    {
+        "merged": "G:\\android_studio\\studio_workspace\\Other\\SpeechNow\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\pay_button_press.9.png",
+        "source": "G:\\android_studio\\studio_workspace\\Other\\SpeechNow\\src\\main\\res\\drawable-hdpi\\pay_button_press.9.png"
+    },
+    {
+        "merged": "G:\\android_studio\\studio_workspace\\Other\\SpeechNow\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_ic_menu_cut_mtrl_alpha.png",
+        "source": "G:\\android_studio\\studio_workspace\\Other\\SpeechNow\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\drawable-hdpi\\abc_ic_menu_cut_mtrl_alpha.png"
+    },
+    {
+        "merged": "G:\\android_studio\\studio_workspace\\Other\\SpeechNow\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_ic_go_search_api_mtrl_alpha.png",
+        "source": "G:\\android_studio\\studio_workspace\\Other\\SpeechNow\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\drawable-hdpi\\abc_ic_go_search_api_mtrl_alpha.png"
+    },
+    {
+        "merged": "G:\\android_studio\\studio_workspace\\Other\\SpeechNow\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\keyboard_nine_press.png",
+        "source": "G:\\android_studio\\studio_workspace\\Other\\SpeechNow\\src\\main\\res\\drawable-hdpi\\keyboard_nine_press.png"
+    },
+    {
+        "merged": "G:\\android_studio\\studio_workspace\\Other\\SpeechNow\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\keyboard_three.png",
+        "source": "G:\\android_studio\\studio_workspace\\Other\\SpeechNow\\src\\main\\res\\drawable-hdpi\\keyboard_three.png"
+    },
+    {
+        "merged": "G:\\android_studio\\studio_workspace\\Other\\SpeechNow\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_ic_search_api_mtrl_alpha.png",
+        "source": "G:\\android_studio\\studio_workspace\\Other\\SpeechNow\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\drawable-hdpi\\abc_ic_search_api_mtrl_alpha.png"
+    },
+    {
+        "merged": "G:\\android_studio\\studio_workspace\\Other\\SpeechNow\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\keyboard_zero.png",
+        "source": "G:\\android_studio\\studio_workspace\\Other\\SpeechNow\\src\\main\\res\\drawable-hdpi\\keyboard_zero.png"
+    },
+    {
+        "merged": "G:\\android_studio\\studio_workspace\\Other\\SpeechNow\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\filedialog_folder.png",
+        "source": "G:\\android_studio\\studio_workspace\\Other\\SpeechNow\\src\\main\\res\\drawable-hdpi\\filedialog_folder.png"
+    },
+    {
+        "merged": "G:\\android_studio\\studio_workspace\\Other\\SpeechNow\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\keyboard_one_press.png",
+        "source": "G:\\android_studio\\studio_workspace\\Other\\SpeechNow\\src\\main\\res\\drawable-hdpi\\keyboard_one_press.png"
+    },
+    {
+        "merged": "G:\\android_studio\\studio_workspace\\Other\\SpeechNow\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\keyboard_nine.png",
+        "source": "G:\\android_studio\\studio_workspace\\Other\\SpeechNow\\src\\main\\res\\drawable-hdpi\\keyboard_nine.png"
+    },
+    {
+        "merged": "G:\\android_studio\\studio_workspace\\Other\\SpeechNow\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\keyboard_four_press.png",
+        "source": "G:\\android_studio\\studio_workspace\\Other\\SpeechNow\\src\\main\\res\\drawable-hdpi\\keyboard_four_press.png"
+    },
+    {
+        "merged": "G:\\android_studio\\studio_workspace\\Other\\SpeechNow\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_tab_indicator_mtrl_alpha.9.png",
+        "source": "G:\\android_studio\\studio_workspace\\Other\\SpeechNow\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\drawable-hdpi\\abc_tab_indicator_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "G:\\android_studio\\studio_workspace\\Other\\SpeechNow\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\ic_action_search.png",
+        "source": "G:\\android_studio\\studio_workspace\\Other\\SpeechNow\\src\\main\\res\\drawable-hdpi\\ic_action_search.png"
+    },
+    {
+        "merged": "G:\\android_studio\\studio_workspace\\Other\\SpeechNow\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_textfield_search_activated_mtrl_alpha.9.png",
+        "source": "G:\\android_studio\\studio_workspace\\Other\\SpeechNow\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\drawable-hdpi\\abc_textfield_search_activated_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "G:\\android_studio\\studio_workspace\\Other\\SpeechNow\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\pay_button_nor.9.png",
+        "source": "G:\\android_studio\\studio_workspace\\Other\\SpeechNow\\src\\main\\res\\drawable-hdpi\\pay_button_nor.9.png"
+    },
+    {
+        "merged": "G:\\android_studio\\studio_workspace\\Other\\SpeechNow\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_spinner_mtrl_am_alpha.9.png",
+        "source": "G:\\android_studio\\studio_workspace\\Other\\SpeechNow\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\drawable-hdpi\\abc_spinner_mtrl_am_alpha.9.png"
+    },
+    {
+        "merged": "G:\\android_studio\\studio_workspace\\Other\\SpeechNow\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\keyboard_five.png",
+        "source": "G:\\android_studio\\studio_workspace\\Other\\SpeechNow\\src\\main\\res\\drawable-hdpi\\keyboard_five.png"
+    },
+    {
+        "merged": "G:\\android_studio\\studio_workspace\\Other\\SpeechNow\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_ic_clear_mtrl_alpha.png",
+        "source": "G:\\android_studio\\studio_workspace\\Other\\SpeechNow\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\drawable-hdpi\\abc_ic_clear_mtrl_alpha.png"
+    }
+]

@@ -13,7 +13,7 @@ import com.lidroid.xutils.db.annotation.Table;
  * 1.12增加 line 和 checkDate
  */
 @Table(name = "record")
-public class Record implements Parcelable{
+public class Record implements Parcelable {
     @Id(column = "_id")
     private int _id;
 
@@ -42,6 +42,21 @@ public class Record implements Parcelable{
      * 第N组；以plan的每组机器个数为例；如果每个人每次测试4个机器，则每个level为4个
      */
     private int level;
+    private String line;//检查产品的线别
+    private String checkDate;//检查产品的日期
+    private String checkWorker;//检查产品的工人
+
+    //是否测试过
+    private boolean done = false;
+
+    //是否尾货
+    private boolean isTail = false;
+
+    //机器型号（手动书写时需要）
+    private String machinetype;
+    //测试的结果：未测试，0 ； 合格 ：１　，　不合格：２
+    private int result = 0;
+
     //从0到300
     private float checkValue0 = 0;
     private float checkValue50;
@@ -64,26 +79,9 @@ public class Record implements Parcelable{
     //um-10
     private float checkValue300_2;
 
-    private String line;//检查产品的线别
-    private String checkDate;//检查产品的日期
-    private String checkWorker;//检查产品的工人
-
-    //是否测试过
-    private boolean done = false;
-
-    //是否尾货
-    private boolean isTail = false;
-
-    //测试的结果：未测试，0 ； 合格 ：１　，　不合格：２
-    private int result = 0;
-
-    public static final int result_init = 00;
-    public static final int result_ok = 01;
-    public static final int result_fail = 02;
-
-
-    //机器型号（手动书写时需要）
-    private String machinetype;
+    public static final int result_init = 0;
+    public static final int result_ok = 1;
+    public static final int result_fail = 2;
 
     protected Record(Parcel in) {
         _id = in.readInt();
@@ -175,7 +173,7 @@ public class Record implements Parcelable{
         this.machinetype = machinetype;
     }
 
-    public Record(){
+    public Record() {
 
     }
 

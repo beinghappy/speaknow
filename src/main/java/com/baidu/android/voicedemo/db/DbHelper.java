@@ -1,7 +1,6 @@
 package com.baidu.android.voicedemo.db;
 
 import android.content.Context;
-import android.os.Environment;
 import android.text.TextUtils;
 import android.util.Log;
 
@@ -28,27 +27,6 @@ public class DbHelper implements DbUtils.DbUpgradeListener {
 
     public static void initDb(Context context) {
         //本地数据的初始化
-        Log.e("tag", "create db on " + Environment.getExternalStorageDirectory());
-//        DbManager.DaoConfig daoConfig = new DbManager.DaoConfig()
-//                .setDbName(StaticUtils.DB_NAME) //设置数据库名
-//                .setDbVersion(1) //设置数据库版本,每次启动应用时将会检查该版本号,
-//                //发现数据库版本低于这里设置的值将进行数据库升级并触发DbUpgradeListener
-//                .setDbDir(Environment.getExternalStorageDirectory())
-//                .setAllowTransaction(true)//设置是否开启事务,默认为false关闭事务
-//                .setTableCreateListener(new DbManager.TableCreateListener() {
-//                    @Override
-//                    public void onTableCreated(DbManager db, TableEntity<?> table) {
-//
-//                    }
-//                })//设置数据库创建时的Listener
-//                .setDbUpgradeListener(new DbManager.DbUpgradeListener() {
-//                    @Override
-//                    public void onUpgrade(DbManager db, int oldVersion, int newVersion) {
-//                        //balabala...
-//                    }
-//                });//设置数据库升级时的Listener,这里可以执行相关数据库表的相关修改,比如alter语句增加字段等
-//        db = x.getDb(daoConfig);
-
         String dir = FileUtils.getDBDir();
         Log.e("tag", "create db on " + dir);
         db = DbUtils.create(context, dir, StaticUtils.DB_NAME);
@@ -185,9 +163,8 @@ public class DbHelper implements DbUtils.DbUpgradeListener {
         try {
             //update by long.tang for "2017-7-13 第一条"
             //只获取不合格的；不管是done为true（输入不合格），还是done为false（尾数直接）//不合格的done也为false
-            return db.findAll(Selector.from(Record.class).where("result", "!=", Record.result_ok)
+            return db.findAll(Selector.from(Record.class).where("result", "==", Record.result_fail)
 //            return db.findAll(Selector.from(Record.class).where("done", "==", false)
-//                    .and("extend", "==", false)
             );
             //update by long.tang for "2017-7-13 第一条"
         } catch (DbException e) {

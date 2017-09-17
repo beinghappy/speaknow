@@ -5,15 +5,14 @@ package com.baidu.android.voicedemo.bean;
  * Created by Administrator on 2016/11/19.
  */
 
-import android.os.Parcel;
-import android.os.Parcelable;
-
 import com.lidroid.xutils.db.annotation.Id;
 import com.lidroid.xutils.db.annotation.Table;
 
+import java.io.Serializable;
+
 
 @Table(name = "plan")
-public class Plan implements Parcelable {
+public class Plan implements Serializable {
     /**
      * 计划的数据库的序号
      */
@@ -80,64 +79,6 @@ public class Plan implements Parcelable {
     public Plan(){
 
     }
-
-    protected Plan(Parcel in) {
-        _id = in.readInt();
-        orderId = in.readString();
-        machineType = in.readString();
-        machineTypeDisplay = in.readString();
-        orderAccount = in.readString();
-        produceClass = in.readString();
-        produceLine = in.readString();
-        checkerJobIndex1 = in.readString();
-        checkerJobIndex2 = in.readString();
-        orderSuffix = in.readString();
-        orderIndexBegin = in.readString();
-        checkDate = in.readString();
-        checkTableIndex = in.readInt();
-        workPositionAccount = in.readInt();
-        checkMachineNumPer = in.readInt();
-        done = in.readByte() != 0;
-        hasTail = in.readByte() != 0;
-    }
-
-    @Override
-    public void writeToParcel(Parcel dest, int flags) {
-        dest.writeInt(_id);
-        dest.writeString(orderId);
-        dest.writeString(machineType);
-        dest.writeString(machineTypeDisplay);
-        dest.writeString(orderAccount);
-        dest.writeString(produceClass);
-        dest.writeString(produceLine);
-        dest.writeString(checkerJobIndex1);
-        dest.writeString(checkerJobIndex2);
-        dest.writeString(orderSuffix);
-        dest.writeString(orderIndexBegin);
-        dest.writeString(checkDate);
-        dest.writeInt(checkTableIndex);
-        dest.writeInt(workPositionAccount);
-        dest.writeInt(checkMachineNumPer);
-        dest.writeByte((byte) (done ? 1 : 0));
-        dest.writeByte((byte) (hasTail ? 1 : 0));
-    }
-
-    @Override
-    public int describeContents() {
-        return 0;
-    }
-
-    public static final Creator<Plan> CREATOR = new Creator<Plan>() {
-        @Override
-        public Plan createFromParcel(Parcel in) {
-            return new Plan(in);
-        }
-
-        @Override
-        public Plan[] newArray(int size) {
-            return new Plan[size];
-        }
-    };
 
     @Override
     public String toString() {

@@ -42,6 +42,7 @@ public class CreateExcel {
     private static String[] title1 = {"序列号", "测试次数", "0", "50", "100", "150", "200", "250", "280", "280", "250", "200", "150", "100", "50", "0", "检查员", "日期","线别"};
     private static String[] title2 = {"序列号", "测试次数", "0", "50", "100", "150", "200", "250", "300", "280", "300",  "280","250", "200", "150", "100", "50", "0", "检查员", "日期","线别"};
     private static String[] title3 = {"序列号", "测试次数", "0", "50", "100", "150", "200", "250", "299", "299", "250", "200", "150", "100", "50", "0", "检查员", "日期","线别"};
+    private static String[] title_300 = {"序列号", "测试次数", "0", "50", "100", "150", "200", "250", "300", "300", "250", "200", "150", "100", "50", "0", "检查员", "日期","线别"};
 
     private String machineType;
     private HashMap<String, String> indexMap = null;
@@ -54,7 +55,9 @@ public class CreateExcel {
             title = title1;
         } else if (machineType.equals(HomeActivity.CREATE_UM_10 + "")) {
             title = title2;
-        } else {
+        } else if (machineType.equals(HomeActivity.CREATE_300 + "")){
+            title = title_300;
+        }else{
             title = title3;
         }
 
@@ -205,16 +208,18 @@ public class CreateExcel {
             index++;
             labeli = new Label(index, i + 1, record.getCheckValue100() + "", wcf);
             sheet.addCell(labeli);
+
             index++;
             labeli = new Label(index, i + 1, record.getCheckValue150() + "", wcf);
             sheet.addCell(labeli);
+
             index++;
             labeli = new Label(index, i + 1, record.getCheckValue200() + "", wcf);
             sheet.addCell(labeli);
+
             index++;
             labeli = new Label(index, i + 1, record.getCheckValue250() + "", wcf);
             sheet.addCell(labeli);
-            index++;
 
             //um10的 顺序是  300,280,300,280
             if (machineType.equals(HomeActivity.CREATE_UM_10 + "")) {
@@ -223,9 +228,9 @@ public class CreateExcel {
                 sheet.addCell(labeli);
             }
 
+            index++;
             labeli = new Label(index, i + 1, record.getCheckValue280() + "", wcf);
             sheet.addCell(labeli);
-            index++;
 
             if (machineType.equals(HomeActivity.CREATE_UM_10)) {
                 index++;
@@ -233,23 +238,30 @@ public class CreateExcel {
                 sheet.addCell(labeli);
             }
 
+            index++;
             labeli = new Label(index, i + 1, record.getCheckValue280_2() + "", wcf);
             sheet.addCell(labeli);
+
             index++;
             labeli = new Label(index, i + 1, record.getCheckValue250_2() + "", wcf);
             sheet.addCell(labeli);
+
             index++;
             labeli = new Label(index, i + 1, record.getCheckValue200_2() + "", wcf);
             sheet.addCell(labeli);
+
             index++;
             labeli = new Label(index, i + 1, record.getCheckValue150_2() + "", wcf);
             sheet.addCell(labeli);
+
             index++;
             labeli = new Label(index, i + 1, record.getCheckValue100_2() + "", wcf);
             sheet.addCell(labeli);
+
             index++;
             labeli = new Label(index, i + 1, record.getCheckValue50_2() + "", wcf);
             sheet.addCell(labeli);
+
             index++;
             labeli = new Label(index, i + 1, record.getCheckValue0_2() + "", wcf);
             sheet.addCell(labeli);
@@ -259,9 +271,11 @@ public class CreateExcel {
             String checker = record.getCheckWorker();
             labeli = new Label(index, i + 1, checker, wcf);
             sheet.addCell(labeli);
+
             index++;
             labeli = new Label(index, i + 1, checkdate, wcf);
             sheet.addCell(labeli);
+            
             //添加线别
             index++;
             //修复“因为没有保存课线与record而导致的问题”

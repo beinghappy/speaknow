@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="8dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        >
+
+        <TextView
+            android:text="生产部门"
+            android:textSize="18sp"
+            android:layout_gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <Spinner
+            android:id="@+id/spinner_produce_class"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:entries="@array/produce_class_list">
+        </Spinner>
+
+        <TextView
+            android:text="课"
+            android:textSize="18sp"
+            android:layout_marginLeft="10dp"
+            android:layout_gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <Spinner
+            android:id="@+id/spinner_produce_line"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:entries="@array/produce_line_list">
+        </Spinner>
+
+        <TextView
+            android:text="线"
+            android:textSize="18sp"
+            android:layout_marginLeft="10dp"
+            android:layout_gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+
+    </LinearLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:id="@+id/checker1_holder"
+        app:errorEnabled="true"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/editText_checker1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:hint="检查员1工号(输入字母B加四位数字)"
+            android:imeActionId="@+id/editText_checker1"
+            android:imeActionLabel="checker1"
+            android:imeOptions="actionUnspecified"
+            android:inputType="text"
+            android:digits="1234567890B"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:text="B"
+            />
+
+    </android.support.design.widget.TextInputLayout>
+
+
+
+</LinearLayout>

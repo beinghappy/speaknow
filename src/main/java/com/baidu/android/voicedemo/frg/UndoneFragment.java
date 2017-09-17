@@ -26,6 +26,7 @@ import com.baidu.android.voicedemo.db.DbHelper;
 import com.baidu.android.voicedemo.ui.EditPlanActivity;
 import com.baidu.android.voicedemo.ui.HomeActivity;
 import com.baidu.android.voicedemo.ui.MainActivity;
+import com.baidu.android.voicedemo.utils.CommonSpUtil;
 import com.baidu.android.voicedemo.utils.CreateExcel;
 import com.baidu.android.voicedemo.utils.EventBusUtils;
 import com.baidu.android.voicedemo.utils.FileUtils;
@@ -109,7 +110,7 @@ public class UndoneFragment extends Fragment {
 
     private void showUndoneNoticeDialog(final Plan plan) {
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
-        int arrayId = StaticUtils.currentUser.getRoleType() == StaticUtils.Role_Admin ? R.array.plan_list_functions : R.array.plan_list_functions_user;
+        int arrayId = CommonSpUtil.getCurrentRole() == StaticUtils.Role_Admin ? R.array.plan_list_functions : R.array.plan_list_functions_user;
         builder.setItems(getResources().getStringArray(arrayId), new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {

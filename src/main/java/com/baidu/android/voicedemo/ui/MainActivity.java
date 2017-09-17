@@ -82,7 +82,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     List<TextView> titleList;
 
     private void initValues() {
-        plan = (Plan) getIntent().getParcelableExtra("data");
+        plan = (Plan) getIntent().getSerializableExtra("data");
         //给checkNumOneMachine赋值
         checkNumOneMachine = plan.getCheckMachineNumPer();
 
@@ -166,7 +166,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         projectPicker.setOnValueChangedListener(new NumberPicker.OnValueChangeListener() {
             @Override
             public void onValueChange(NumberPicker picker, int oldVal, int newVal) {
-                Log.e("tag", "oldval==" + oldVal + ",newval==" + newVal);
+                Log.e(TAG, "oldval==" + oldVal + ",newval==" + newVal);
 
             }
         });
@@ -228,7 +228,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
      * 每次输入一个，需要刷新UI
      * @param mlist
      */
-    boolean rowTestIsOK = true;
     private void updateUi(List<String> mlist) {
         resetGoodLayout();
         int len = 0;//输入数值的个数
@@ -258,7 +257,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         //给超出范围的值变成红色
                         boolean inputOK = FormatUtils.handleInput(recordArrayList.get(index)[levelIndex]);
                         if(!inputOK){
-                            rowTestIsOK = false;
                             textView.setTextColor(Color.RED);
                         }else{
                             textView.setTextColor(Color.BLACK);
@@ -280,7 +278,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         boolean inputvalid = FormatUtils.handleInput(recordArrayList.get(index)[levelIndex]);
                         if(!inputvalid){
                             textView.setTextColor(Color.RED);
-                            rowTestIsOK = false;
                         }else{
                             textView.setTextColor(Color.BLACK);
                         }
@@ -334,28 +331,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
 
         for (int i = 0; i < checkNumOneMachine; i++) {
-            Log.e("tag", "dosaveRowReord==start+i==" + (start + i));
+            Log.e(TAG, "dosaveRowReord==start+i==" + (start + i));
             if (start + i < recordlist.size()) {
-                Log.e("tang","before: "+recordlist.get(start + i).toString());
+                Log.e(TAG,"before: "+recordlist.get(start + i).toString());
                 Record record1 = buildRecordByOld(recordlist.get(start + i), recordArrayList.get(i));
-                Log.e("tang", "after record == " + record1.toString());
+                Log.e(TAG, "after record == " + record1.toString());
                 record1.setTestIndex("0");
-
-                //更新添加线、时间、甚至worker
-                record1.setLine(CommonSpUtil.getLine(plan.getProduceClass()+"课"+plan.getProduceLine()+"线"));
-                record1.setCheckDate(FormatUtils.formatNowTime());
-                record1.setCheckWorker(CommonSpUtil.getWorker(plan.getCheckerJobIndex1()));
-                record1.setDone(true);
-
-                //判断是否包含残次品
-                boolean inputvalid = FormatUtils.handleInput(recordArrayList.get(i));
-                if(!inputvalid){
-                    //fail
-                    testOK1 = false;
-                }
-
-
-
                 list.add(record1);
             }
         }
@@ -368,7 +349,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 //            if (!b) {
 //                Toast.makeText(this, "保存记录失败", Toast.LENGTH_LONG).show();
 //            } else {
-                Log.e("tag", "保存记录已成功");
+                Log.e(TAG, "保存记录已成功");
                 resetGoodLayout();
                 //必须reset mlist这个全局变量
                 if (mList != null) {
@@ -382,7 +363,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     /**
      * 计划第二遍的值
      */
-    public boolean testOK2 = true;
     private void dosaveRowReord2() {
         List<Record> list = new ArrayList<>();
         //todo 单组（三个）结束。
@@ -394,27 +374,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
 
         for (int i = 0; i < checkNumOneMachine; i++) {
-            Log.e("tag", "dosaveRowReord==start+i==" + (start + i));
+            Log.e(TAG, "dosaveRowReord==start+i==" + (start + i));
             if (start + i < recordlist.size()) {
                 Record record1 = buildNewRecord(recordlist.get(start + i),recordArrayList.get(i));
-                Log.e("tang", "dosaveRowReord2: buildOneRecord == " + record1.toString());
+                Log.e(TAG, "dosaveRowReord2: buildOneRecord == " + record1.toString());
                 record1.setTestIndex("1");
-
-                //更新添加线、时间、甚至worker
-                record1.setLine(CommonSpUtil.getLine(plan.getProduceClass() + "课" + plan.getProduceLine() + "线"));
-                record1.setCheckDate(FormatUtils.formatNowTime());
-                record1.setCheckWorker(CommonSpUtil.getWorker(plan.getCheckerJobIndex1()));
-                record1.setDone(true);
-//                //判断是否包含残次品
-                boolean inputvalid = FormatUtils.handleInput(recordArrayList.get(i));
-                if (!inputvalid) {
-                    //fail
-                    testOK2 = false;
-
-                } else {
-
-                }
-
                 list.add(record1);
             }
         }
@@ -441,7 +405,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
 
         if(firstSave&&secondSave){
-                Log.e("tag", "保存二次测试记录已成功");
+                Log.e(TAG, "保存二次测试记录已成功");
                 resetGoodLayout();
                 //必须reset mlist这个全局变量
                 if (mList != null) {
@@ -463,10 +427,20 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         if (firstDoneList != null && secondDoneList != null) {
             if (firstDoneList.size() == secondDoneList.size()) {
                 for (int i = 0; i < firstDoneList.size(); i++) {
-                    boolean isDone = testOK2 && testOK1;
+                    if(firstDoneList.get(i).getResult() == Record.result_fail
+                            || secondDoneList.get(i).getResult() == Record.result_fail){
+                        //每个机器的第一次测试，和第二次测试有一个是fail，那么就等于fail
+                        firstDoneList.get(i).setResult(Record.result_fail);
+                        secondDoneList.get(i).setResult(Record.result_fail);
+                        Log.e(TAG,"第["+i+"]个  fail");
+                    }else if(firstDoneList.get(i).getResult() == Record.result_ok
+                            && secondDoneList.get(i).getResult() == Record.result_ok){
+                        Log.e(TAG,"第["+i+"]个  ok");
+                        //每个机器的第一次测试，和第二次测试都是success，那么就等于success
+                        firstDoneList.get(i).setResult(Record.result_ok);
+                        secondDoneList.get(i).setResult( Record.result_ok);
+                    }
 
-                    firstDoneList.get(i).setResult(isDone ? Record.result_ok : Record.result_fail);
-                    secondDoneList.get(i).setResult(isDone ? Record.result_ok : Record.result_fail);
                 }
             }
         }
@@ -499,7 +473,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 //
 //                        }
 //                    }else{
-//                        Log.e("tang","firstDonelist == null");
+//                        Log.e(TAG,"firstDonelist == null");
 //                    }
 //
 
@@ -524,17 +498,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 for (int i = 0; i < len; i++) {
                     Record first = firstList.get(i);
                     Record secondRecord = secondList.get(i);
-                    Log.e("tang","save == first : "+first.toString());
-                    Log.e("tang","save == secondRecord : "+secondRecord.toString());
+                    Log.e(TAG,"save == first : "+first.toString());
+                    Log.e(TAG,"save == secondRecord : "+secondRecord.toString());
                     newList.add(getAvarageRecord(first, secondRecord));
                 }
 
                 if (newList != null && newList.size() > 0) {
                     boolean b = DbHelper.getInstance(this).addRecordList(newList, false);
                     if (!b) {
-                        Log.e("tang", "保存平均记录失败");
+                        Log.e(TAG, "保存平均记录失败");
                     } else {
-                        Log.e("tang", "保存平均记录已成功");
+                        Log.e(TAG, "保存平均记录已成功");
 
                     }
                 }
@@ -595,9 +569,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         resultRecord.setCheckDate(FormatUtils.formatNowTime());
         resultRecord.setCheckWorker(CommonSpUtil.getWorker(plan.getCheckerJobIndex1()));
 
-        Log.e("tang", "record1:" + record.toString());
-        Log.e("tang", "f2:" + f2.toString());
-        Log.e("tang", "平均record:" + resultRecord.toString());
+        Log.e(TAG, "record1:" + record.toString());
+        Log.e(TAG, "f2:" + f2.toString());
+        Log.e(TAG, "平均record:" + resultRecord.toString());
         return resultRecord;
     }
 
@@ -708,13 +682,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
      * 发出失败的消息，并提示重新录制。
      */
 //    private void sendFail(String text) {
-//        Log.e("tag", "sendFail start");
+//        Log.e(TAG, "sendFail start");
 //        handler.removeMessages(FAIL_CODE);
 //        Message message = handler.obtainMessage(FAIL_CODE);
 //        message.what = FAIL_CODE;
 //        message.obj = text;
 //        handler.sendMessage(message);
-//        Log.e("tag", "sendFail end");
+//        Log.e(TAG, "sendFail end");
 //    }
 
 
@@ -798,18 +772,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
      * 保存尾货，尾货不合格，但是未完成；
      * @param record
      */
-//    private void saveTailRecord(Record record) {
-//        Log.e("tang", "saveTailRecord index ==" + record.getProduceIndex());
-//        record.setDone(false);
-//        record.setMachinetype(record.getMachinetype());
-//        record.setExtend(false);
-//        //更新添加线、时间、甚至worker
-//        record.setLine(CommonSpUtil.getLine(plan.getProduceClass() + "课" + plan.getProduceLine() + "线"));
-//        record.setCheckDate(FormatUtils.formatNowTime());
-//        record.setCheckWorker(CommonSpUtil.getWorker(plan.getCheckerJobIndex1()));
-//
-//        DbHelper.getInstance(this).updateRecord(record);
-//    }
+    private void saveTailRecord(Record record) {
+        Log.e(TAG, "saveTailRecord index ==" + record.getProduceIndex());
+        record.setDone(false);
+        record.setMachinetype(record.getMachinetype());
+        record.setResult(Record.result_fail);
+        record.setTail(true);
+        //更新添加线、时间、甚至worker
+        record.setLine(CommonSpUtil.getLine(plan.getProduceClass() + "课" + plan.getProduceLine() + "线"));
+        record.setCheckDate(FormatUtils.formatNowTime());
+        record.setCheckWorker(CommonSpUtil.getWorker(plan.getCheckerJobIndex1()));
+
+        DbHelper.getInstance(this).updateRecord(record);
+    }
 
     /**
      * 3,-3 ,不合格
@@ -841,6 +816,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         resultRecord.setDone(true);
         resultRecord.setResult(isOK ? Record.result_ok : Record.result_fail);
         resultRecord.setMachinetype(plan.getMachineType());
+        //更新添加线、时间、甚至worker
+        resultRecord.setLine(CommonSpUtil.getLine(plan.getProduceClass()+"课"+plan.getProduceLine()+"线"));
+        resultRecord.setCheckDate(FormatUtils.formatNowTime());
+        resultRecord.setCheckWorker(CommonSpUtil.getWorker(plan.getCheckerJobIndex1()));
+
         if (planType == HomeActivity.CREATE_COMMON) {
             //update for "add 两个 0档位"
             resultRecord.setCheckValue0(recordArray[0]);
@@ -920,6 +900,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         resultRecord.setOrderSuffix(record.getOrderSuffix());
         resultRecord.setProduceIndex(record.getProduceIndex());
         resultRecord.setMachinetype(plan.getMachineType());
+        //更新添加线、时间、甚至worker
+        resultRecord.setLine(CommonSpUtil.getLine(plan.getProduceClass() + "课" + plan.getProduceLine() + "线"));
+        resultRecord.setCheckDate(FormatUtils.formatNowTime());
+        resultRecord.setCheckWorker(CommonSpUtil.getWorker(plan.getCheckerJobIndex1()));
+        resultRecord.setDone(true);
+
+
         if (planType == HomeActivity.CREATE_COMMON) {
             resultRecord.setCheckValue0(recordArray[0]);
             resultRecord.setCheckValue50(recordArray[1]);
@@ -990,12 +977,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
         } else {
             //多若干个
-            plan.setDone(true);
-            for (int i = start; i < recordlist.size(); i++) {
-                //保存为尾货
+            boolean hasFail = DbHelper.getInstance(this).hasFailRecord(plan.getOrderId());
+            plan.setDone(!hasFail);
+//            for (int i = start; i < recordlist.size(); i++) {
+//                //保存为尾货
 //                saveTailRecord(recordlist.get(i));
-                plan.setDone(false);
-            }
+//                plan.setDone(false);
+//            }
             //没有下一组完整的数组的话
             Toast.makeText(this, "没有下一组数据了", Toast.LENGTH_LONG).show();
             if (!menuClick) {
