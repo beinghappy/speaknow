@@ -24,7 +24,7 @@ public class Plan implements Serializable {
     @Id(column = "orderId")
     private String orderId;
     /**
-     * 机型的标识:普通机型： 1 ；um-10：2； 299：3；
+     * 机型的标识:普通机型： 1 ；um-10：2； 299：3；300,4;
      */
     private String machineType;
 

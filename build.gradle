@@ -13,10 +13,17 @@ android {
 
     buildTypes {
         release {
+            buildConfigField("boolean","isUM","false")
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
         }
+
+        debug{
+            buildConfigField("boolean","isUM","true")
+        }
+
     }
+
 }
 
 dependencies {

@@ -41,6 +41,8 @@ public class CreateExcel {
     private static String[] title = {"序列号", "测试次数", "0", "50", "100", "150", "200", "250", "280", "280", "250", "200", "150", "100", "50", "0", "检查员", "日期","线别"};
     private static String[] title1 = {"序列号", "测试次数", "0", "50", "100", "150", "200", "250", "280", "280", "250", "200", "150", "100", "50", "0", "检查员", "日期","线别"};
     private static String[] title2 = {"序列号", "测试次数", "0", "50", "100", "150", "200", "250", "300", "280", "300",  "280","250", "200", "150", "100", "50", "0", "检查员", "日期","线别"};
+    private static String[] title2_UM = {"序列号", "测试次数", "0D", "0A","50D","50A",  "100D", "100A", "150D","150A",  "200D", "200A", "250D", "250A",
+            "300D", "280A", "300D", "280A", "250D","250A", "200D","200A", "150D","150A", "100D","100A", "50D","50A", "0D", "0A","检查员", "日期","线别"};
     private static String[] title3 = {"序列号", "测试次数", "0", "50", "100", "150", "200", "250", "299", "299", "250", "200", "150", "100", "50", "0", "检查员", "日期","线别"};
     private static String[] title_300 = {"序列号", "测试次数", "0", "50", "100", "150", "200", "250", "300", "300", "250", "200", "150", "100", "50", "0", "检查员", "日期","线别"};
 
@@ -54,7 +56,7 @@ public class CreateExcel {
         if (machineType.equals(HomeActivity.CREATE_COMMON + "")) {
             title = title1;
         } else if (machineType.equals(HomeActivity.CREATE_UM_10 + "")) {
-            title = title2;
+            title = title2_UM;
         } else if (machineType.equals(HomeActivity.CREATE_300 + "")){
             title = title_300;
         }else{
@@ -128,8 +130,6 @@ public class CreateExcel {
     }
 
 
-
-
     /**
      * 写入content；使用默认title
      */
@@ -161,6 +161,165 @@ public class CreateExcel {
 //        String checkdate = plan.getCheckDate().isEmpty() ? FormatUtils.formatNowTime() : plan.getCheckDate();
 
 //        String checker = "工号：" + plan.getCheckerJobIndex1() + " 、 " + plan.getCheckerJobIndex2();
+
+        for (int i = 0; i < content.size(); i++) {
+            //从第一排开始，一个record一行
+            Record record = content.get(i);
+            //使用record的检查日期
+            String checkdate = record.getCheckDate().isEmpty() ? FormatUtils.formatNowTime() : record.getCheckDate();
+
+
+            //定义颜色
+            WritableFont font = new WritableFont(WritableFont.createFont("宋体"),
+                    10, WritableFont.NO_BOLD);// 字体样式
+            WritableCellFormat wcf = new WritableCellFormat(font);
+            //设置对齐方式为水平居中
+            wcf.setAlignment(Alignment.CENTRE);
+            //设置对齐方式为垂直居中
+            wcf.setVerticalAlignment(VerticalAlignment.CENTRE);
+
+            if (record.getTestIndex().equals("0")) {
+                wcf.setBackground(Colour.BLUE_GREY);
+            } else if (record.getTestIndex().equals("1")) {
+                wcf.setBackground(Colour.DARK_YELLOW);
+            } else {
+                wcf.setBackground(Colour.GREY_50_PERCENT);
+            }
+
+
+            //定义第0行写入
+            int index = 0;
+            //第0行,第i+1列
+            Label labeli = new Label(index, i + 1, record.getOrderSuffix() + record.getProduceIndex(), wcf);
+            sheet.addCell(labeli);
+            //第几次测试。要加1
+            index++;
+            labeli = new Label(index, i + 1, (Integer.parseInt(record.getTestIndex()) + 1) + "", wcf);
+            sheet.addCell(labeli);
+
+            index++;
+            labeli = new Label(index, i + 1, record.getCheckValue0() + "", wcf);
+            sheet.addCell(labeli);
+
+            index++;
+            labeli = new Label(index, i + 1, record.getCheckValue50() + "", wcf);
+            sheet.addCell(labeli);
+
+            index++;
+            labeli = new Label(index, i + 1, record.getCheckValue100() + "", wcf);
+            sheet.addCell(labeli);
+
+            index++;
+            labeli = new Label(index, i + 1, record.getCheckValue150() + "", wcf);
+            sheet.addCell(labeli);
+
+            index++;
+            labeli = new Label(index, i + 1, record.getCheckValue200() + "", wcf);
+            sheet.addCell(labeli);
+
+            index++;
+            labeli = new Label(index, i + 1, record.getCheckValue250() + "", wcf);
+            sheet.addCell(labeli);
+
+            //um10的 顺序是  300,280,300,280
+            if (machineType.equals(HomeActivity.CREATE_UM_10 + "")) {
+                index++;
+                labeli = new Label(index, i + 1, record.getCheckValue300() + "", wcf);
+                sheet.addCell(labeli);
+            }
+
+            index++;
+            labeli = new Label(index, i + 1, record.getCheckValue280() + "", wcf);
+            sheet.addCell(labeli);
+
+            if (machineType.equals(HomeActivity.CREATE_UM_10)) {
+                index++;
+                labeli = new Label(index, i + 1, record.getCheckValue300_2() + "", wcf);
+                sheet.addCell(labeli);
+            }
+
+            index++;
+            labeli = new Label(index, i + 1, record.getCheckValue280_2() + "", wcf);
+            sheet.addCell(labeli);
+
+            index++;
+            labeli = new Label(index, i + 1, record.getCheckValue250_2() + "", wcf);
+            sheet.addCell(labeli);
+
+            index++;
+            labeli = new Label(index, i + 1, record.getCheckValue200_2() + "", wcf);
+            sheet.addCell(labeli);
+
+            index++;
+            labeli = new Label(index, i + 1, record.getCheckValue150_2() + "", wcf);
+            sheet.addCell(labeli);
+
+            index++;
+            labeli = new Label(index, i + 1, record.getCheckValue100_2() + "", wcf);
+            sheet.addCell(labeli);
+
+            index++;
+            labeli = new Label(index, i + 1, record.getCheckValue50_2() + "", wcf);
+            sheet.addCell(labeli);
+
+            index++;
+            labeli = new Label(index, i + 1, record.getCheckValue0_2() + "", wcf);
+            sheet.addCell(labeli);
+
+            index++;
+            //修改checker的获取
+            String checker = record.getCheckWorker();
+            labeli = new Label(index, i + 1, checker, wcf);
+            sheet.addCell(labeli);
+
+            index++;
+            labeli = new Label(index, i + 1, checkdate, wcf);
+            sheet.addCell(labeli);
+
+            //添加线别
+            index++;
+            //修复“因为没有保存课线与record而导致的问题”
+            String line = plan.getProduceClass()+"课"+plan.getProduceLine()+"线";
+            labeli = new Label(index, i + 1, line, wcf);
+            sheet.addCell(labeli);
+        }
+
+        // 写入数据
+        wwb.write();
+        // 关闭文件
+        wwb.close();
+    }
+
+
+
+
+    /**
+     * 写入content；使用UMtitle
+     */
+    public void saveUMDataToExcel(List<Record> content, Plan plan) throws Exception {
+        Label label;
+        for (int i = 0; i < title.length; i++) {
+            /**Label(x,y,z)其中x代表单元格的第x+1列，第y+1行, 单元格的内容是y
+             * 在Label对象的子对象中指明单元格的位置和内容
+             * */
+            WritableFont font = new WritableFont(WritableFont.createFont("宋体"),
+                    12, WritableFont.BOLD);// 字体样式
+            WritableCellFormat wcf = new WritableCellFormat(font);
+            //设置对齐方式为水平居中
+            wcf.setAlignment(Alignment.CENTRE);
+            //设置对齐方式为垂直居中
+            wcf.setVerticalAlignment(VerticalAlignment.CENTRE);
+            label = new Label(i, 0, title[i], wcf);
+            /**将定义好的单元格添加到工作表中*/
+
+            sheet.addCell(label);
+        }
+        /*
+        * 把数据填充到单元格中
+        * 需要使用jxl.write.Number
+        * 路径必须使用其完整路径，否则会出现错误
+        */
+
 
         for (int i = 0; i < content.size(); i++) {
             //从第一排开始，一个record一行

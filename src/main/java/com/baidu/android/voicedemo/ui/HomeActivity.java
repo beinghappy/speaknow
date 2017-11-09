@@ -21,6 +21,8 @@ import android.widget.Toast;
 
 import com.baidu.speech.recognizerdemo.R;
 
+import static com.baidu.speech.recognizerdemo.BuildConfig.isUM;
+
 /**
  * 首页：三种功能按钮，和查看版本
  */
@@ -49,14 +51,26 @@ public class HomeActivity extends AppCompatActivity {
         donePlanTV = (TextView) findViewById(R.id.btn_done);
         undonePlanTV = (TextView) findViewById(R.id.btn_undone);
 
+        if(isUM){
+            createOrderTV.setText("创建UM订单");
+        }else{
+            createOrderTV.setText("新建生产单");
+        }
+
         createOrderTV.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
-                //跳转机型选择界面
-                jumpMachineType();
+                if(isUM){
+                    buildUMPlan();
+                }else{
+                    //跳转机型选择界面
+                    jumpMachineType();
+                }
+
             }
         });
+
         donePlanTV.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -75,6 +89,12 @@ public class HomeActivity extends AppCompatActivity {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             requestPermissions(perssion, REQUEST_ID);
         }
+    }
+
+    private void buildUMPlan() {
+        Intent intent = new Intent(this,BuildPlanActivity.class);
+        intent.putExtra("type",HomeActivity.CREATE_UM_10);
+        startActivity(intent);
     }
 
     @Override

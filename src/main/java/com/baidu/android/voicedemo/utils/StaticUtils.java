@@ -7,6 +7,7 @@ import com.baidu.android.voicedemo.bean.UserInfo;
  */
 public class StaticUtils {
     public final static String DB_NAME = "hello.db3";
+    public final static String UM_DB_NAME = "um_hello.db3";
     public final static int Role_Admin = 1;
     public final static int Role_User = 2;
     public final static int COMMAND_REFLASH = 200;
