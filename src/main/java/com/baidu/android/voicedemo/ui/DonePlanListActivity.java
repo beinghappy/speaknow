@@ -28,8 +28,6 @@ import com.baidu.speech.recognizerdemo.R;
 
 import java.util.List;
 
-import static com.baidu.speech.recognizerdemo.BuildConfig.isUM;
-
 /**
  * 已完成生产单列表
  */
@@ -62,9 +60,9 @@ public class DonePlanListActivity extends AppCompatActivity {
                 @Override
                 public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                     //非UM类型才有查看完成的订单的功能
-                    if(!isUM){
-                        openHandPlan(list.get(position));
-                    }
+                   // if(!isUM){
+                   //     openHandPlan(list.get(position));
+                   // }
                 }
             });
             listView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
