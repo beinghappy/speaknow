@@ -858,24 +858,58 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             resultRecord.setCheckValue250_2(recordArray[8]);
             resultRecord.setCheckValue280_2(recordArray[7]);
         } else if (planType == HomeActivity.CREATE_UM_10) {
-            //update for "add 两个 0档位"
-            resultRecord.setCheckValue0(recordArray[0]);
-            resultRecord.setCheckValue50(recordArray[1]);
-            resultRecord.setCheckValue100(recordArray[2]);
-            resultRecord.setCheckValue150(recordArray[3]);
-            resultRecord.setCheckValue200(recordArray[4]);
-            resultRecord.setCheckValue250(recordArray[5]);
-            resultRecord.setCheckValue280(recordArray[6]);
-            resultRecord.setCheckValue300(recordArray[7]);
+            //只需要改这个
 
-            resultRecord.setCheckValue280_2(recordArray[8]);
-            resultRecord.setCheckValue300_2(recordArray[9]);
-            resultRecord.setCheckValue250_2(recordArray[10]);
-            resultRecord.setCheckValue200_2(recordArray[11]);
-            resultRecord.setCheckValue150_2(recordArray[12]);
-            resultRecord.setCheckValue100_2(recordArray[13]);
-            resultRecord.setCheckValue50_2(recordArray[14]);
-            resultRecord.setCheckValue0_2(recordArray[15]);
+            resultRecord.setCheckValue0(recordArray[0]);
+            resultRecord.setCheckValue0A(recordArray[1]);
+            resultRecord.setCheckValue50(recordArray[2]);
+            resultRecord.setCheckValue50A(recordArray[3]);
+            resultRecord.setCheckValue100(recordArray[4]);
+            resultRecord.setCheckValue100A(recordArray[5]);
+            resultRecord.setCheckValue150(recordArray[6]);
+            resultRecord.setCheckValue150A(recordArray[7]);
+            resultRecord.setCheckValue200(recordArray[8]);
+            resultRecord.setCheckValue200A(recordArray[9]);
+            resultRecord.setCheckValue250(recordArray[10]);
+            resultRecord.setCheckValue250A(recordArray[11]);
+
+            resultRecord.setCheckValue300(recordArray[12]);
+            resultRecord.setCheckValue280(recordArray[13]);
+            resultRecord.setCheckValue300_2(recordArray[14]);
+            resultRecord.setCheckValue280_2(recordArray[15]);
+
+            resultRecord.setCheckValue250_2(recordArray[16]);
+            resultRecord.setCheckValue250_2A(recordArray[17]);
+            resultRecord.setCheckValue200_2(recordArray[18]);
+            resultRecord.setCheckValue200_2A(recordArray[19]);
+            resultRecord.setCheckValue150_2(recordArray[20]);
+            resultRecord.setCheckValue150_2A(recordArray[21]);
+            resultRecord.setCheckValue100_2(recordArray[22]);
+            resultRecord.setCheckValue100_2A(recordArray[23]);
+            resultRecord.setCheckValue50_2(recordArray[24]);
+            resultRecord.setCheckValue50_2A(recordArray[25]);
+            resultRecord.setCheckValue0_2(recordArray[26]);
+            resultRecord.setCheckValue0_2A(recordArray[27]);
+
+
+            //update for "add 两个 0档位"
+//            resultRecord.setCheckValue0(recordArray[0]);
+//            resultRecord.setCheckValue50(recordArray[1]);
+//            resultRecord.setCheckValue100(recordArray[2]);
+//            resultRecord.setCheckValue150(recordArray[3]);
+//            resultRecord.setCheckValue200(recordArray[4]);
+//            resultRecord.setCheckValue250(recordArray[5]);
+//            resultRecord.setCheckValue280(recordArray[6]);
+//            resultRecord.setCheckValue300(recordArray[7]);
+//
+//            resultRecord.setCheckValue280_2(recordArray[8]);
+//            resultRecord.setCheckValue300_2(recordArray[9]);
+//            resultRecord.setCheckValue250_2(recordArray[10]);
+//            resultRecord.setCheckValue200_2(recordArray[11]);
+//            resultRecord.setCheckValue150_2(recordArray[12]);
+//            resultRecord.setCheckValue100_2(recordArray[13]);
+//            resultRecord.setCheckValue50_2(recordArray[14]);
+//            resultRecord.setCheckValue0_2(recordArray[15]);
         } else {
             //update for "add 两个 0档位"
             resultRecord.setCheckValue0(recordArray[0]);
