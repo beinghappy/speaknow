@@ -359,17 +359,22 @@ public class CreateExcel {
             index++;
             labeli = new Label(index, i + 1, record.getCheckValue0() + "", wcf);
             sheet.addCell(labeli);
-
             index++;
-            labeli = new Label(index, i + 1, record.getCheckValue0() + "", wcf);
+            labeli = new Label(index, i + 1, record.getCheckValue0A() + "", wcf);
             sheet.addCell(labeli);
 
             index++;
             labeli = new Label(index, i + 1, record.getCheckValue50() + "", wcf);
             sheet.addCell(labeli);
+            index++;
+            labeli = new Label(index, i + 1, record.getCheckValue50A() + "", wcf);
+            sheet.addCell(labeli);
 
             index++;
             labeli = new Label(index, i + 1, record.getCheckValue100() + "", wcf);
+            sheet.addCell(labeli);
+            index++;
+            labeli = new Label(index, i + 1, record.getCheckValue100A() + "", wcf);
             sheet.addCell(labeli);
 
             index++;
@@ -379,27 +384,29 @@ public class CreateExcel {
             index++;
             labeli = new Label(index, i + 1, record.getCheckValue200() + "", wcf);
             sheet.addCell(labeli);
+            index++;
+            labeli = new Label(index, i + 1, record.getCheckValue200A() + "", wcf);
+            sheet.addCell(labeli);
 
             index++;
             labeli = new Label(index, i + 1, record.getCheckValue250() + "", wcf);
             sheet.addCell(labeli);
+            index++;
+            labeli = new Label(index, i + 1, record.getCheckValue250A() + "", wcf);
+            sheet.addCell(labeli);
 
             //um10的 顺序是  300,280,300,280
-            if (machineType.equals(HomeActivity.CREATE_UM_10 + "")) {
-                index++;
-                labeli = new Label(index, i + 1, record.getCheckValue300() + "", wcf);
-                sheet.addCell(labeli);
-            }
+            index++;
+            labeli = new Label(index, i + 1, record.getCheckValue300() + "", wcf);
+            sheet.addCell(labeli);
 
             index++;
             labeli = new Label(index, i + 1, record.getCheckValue280() + "", wcf);
             sheet.addCell(labeli);
 
-            if (machineType.equals(HomeActivity.CREATE_UM_10)) {
-                index++;
-                labeli = new Label(index, i + 1, record.getCheckValue300_2() + "", wcf);
-                sheet.addCell(labeli);
-            }
+            index++;
+            labeli = new Label(index, i + 1, record.getCheckValue300_2() + "", wcf);
+            sheet.addCell(labeli);
 
             index++;
             labeli = new Label(index, i + 1, record.getCheckValue280_2() + "", wcf);
@@ -408,25 +415,43 @@ public class CreateExcel {
             index++;
             labeli = new Label(index, i + 1, record.getCheckValue250_2() + "", wcf);
             sheet.addCell(labeli);
+            index++;
+            labeli = new Label(index, i + 1, record.getCheckValue250_2A() + "", wcf);
+            sheet.addCell(labeli);
 
             index++;
             labeli = new Label(index, i + 1, record.getCheckValue200_2() + "", wcf);
+            sheet.addCell(labeli);
+            index++;
+            labeli = new Label(index, i + 1, record.getCheckValue200_2A() + "", wcf);
             sheet.addCell(labeli);
 
             index++;
             labeli = new Label(index, i + 1, record.getCheckValue150_2() + "", wcf);
             sheet.addCell(labeli);
+            index++;
+            labeli = new Label(index, i + 1, record.getCheckValue150_2A() + "", wcf);
+            sheet.addCell(labeli);
 
             index++;
             labeli = new Label(index, i + 1, record.getCheckValue100_2() + "", wcf);
+            sheet.addCell(labeli);
+            index++;
+            labeli = new Label(index, i + 1, record.getCheckValue100_2A() + "", wcf);
             sheet.addCell(labeli);
 
             index++;
             labeli = new Label(index, i + 1, record.getCheckValue50_2() + "", wcf);
             sheet.addCell(labeli);
+            index++;
+            labeli = new Label(index, i + 1, record.getCheckValue50_2A() + "", wcf);
+            sheet.addCell(labeli);
 
             index++;
             labeli = new Label(index, i + 1, record.getCheckValue0_2() + "", wcf);
+            sheet.addCell(labeli);
+            index++;
+            labeli = new Label(index, i + 1, record.getCheckValue0_2A() + "", wcf);
             sheet.addCell(labeli);
 
             index++;

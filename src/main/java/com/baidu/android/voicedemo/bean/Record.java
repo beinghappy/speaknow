@@ -12,7 +12,7 @@ import com.lidroid.xutils.db.annotation.Table;
  * 数据库格式
  * 1.12增加 line 和 checkDate
  */
-@Table(name = "record")
+@Table(name = "record_um")
 public class Record implements Parcelable {
     @Id(column = "_id")
     private int _id;
@@ -57,31 +57,49 @@ public class Record implements Parcelable {
     //测试的结果：未测试，0 ； 合格 ：１　，　不合格：２
     private int result = 0;
 
+    //"0D", "0A","50D","50A",  "100D", "100A", "150D","150A",  "200D", "200A", "250D", "250A",
+    // "300D", "280A", "300D", "280A", "250D","250A", "200D","200A", "150D","150A", "100D","100A", "50D","50A", "0D", "0A",
+
+    //位写后缀的是D
     //从0到300
     private float checkValue0 = 0;
+    private float checkValue0A = 0;
     private float checkValue50;
+    private float checkValue50A;
     private float checkValue100;
+    private float checkValue100A;
     private float checkValue150;
+    private float checkValue150A;
     private float checkValue200;
+    private float checkValue200A;
     private float checkValue250;
-    private float checkValue280;
-    //从300到0
-    private float checkValue280_2;
-    private float checkValue250_2;
-    private float checkValue200_2;
-    private float checkValue150_2;
-    private float checkValue100_2;
-    private float checkValue50_2;
-    private float checkValue0_2 = 0;
-
+    private float checkValue250A;
     //um-10
     private float checkValue300;
+    private float checkValue280;//这个280特殊一点
     //um-10
     private float checkValue300_2;
+    private float checkValue280_2;
+
+    //从300到0
+    private float checkValue250_2;
+    private float checkValue250_2A;
+    private float checkValue200_2;
+    private float checkValue200_2A;
+    private float checkValue150_2;
+    private float checkValue150_2A;
+    private float checkValue100_2;
+    private float checkValue100_2A;
+    private float checkValue50_2;
+    private float checkValue50_2A;
+    private float checkValue0_2 = 0;
+    private float checkValue0_2A = 0;
+
 
     public static final int result_init = 0;
     public static final int result_ok = 1;
     public static final int result_fail = 2;
+
 
     protected Record(Parcel in) {
         _id = in.readInt();
@@ -90,67 +108,41 @@ public class Record implements Parcelable {
         orderSuffix = in.readString();
         testIndex = in.readString();
         level = in.readInt();
-        checkValue0 = in.readFloat();
-        checkValue50 = in.readFloat();
-        checkValue100 = in.readFloat();
-        checkValue150 = in.readFloat();
-        checkValue200 = in.readFloat();
-        checkValue250 = in.readFloat();
-        checkValue280 = in.readFloat();
-        checkValue280_2 = in.readFloat();
-        checkValue250_2 = in.readFloat();
-        checkValue200_2 = in.readFloat();
-        checkValue150_2 = in.readFloat();
-        checkValue100_2 = in.readFloat();
-        checkValue50_2 = in.readFloat();
-        checkValue0_2 = in.readFloat();
-        checkValue300 = in.readFloat();
-        checkValue300_2 = in.readFloat();
         line = in.readString();
         checkDate = in.readString();
         checkWorker = in.readString();
         done = in.readByte() != 0;
         isTail = in.readByte() != 0;
-        result = in.readInt();
         machinetype = in.readString();
-    }
-
-    @Override
-    public void writeToParcel(Parcel dest, int flags) {
-        dest.writeInt(_id);
-        dest.writeString(orderId);
-        dest.writeString(produceIndex);
-        dest.writeString(orderSuffix);
-        dest.writeString(testIndex);
-        dest.writeInt(level);
-        dest.writeFloat(checkValue0);
-        dest.writeFloat(checkValue50);
-        dest.writeFloat(checkValue100);
-        dest.writeFloat(checkValue150);
-        dest.writeFloat(checkValue200);
-        dest.writeFloat(checkValue250);
-        dest.writeFloat(checkValue280);
-        dest.writeFloat(checkValue280_2);
-        dest.writeFloat(checkValue250_2);
-        dest.writeFloat(checkValue200_2);
-        dest.writeFloat(checkValue150_2);
-        dest.writeFloat(checkValue100_2);
-        dest.writeFloat(checkValue50_2);
-        dest.writeFloat(checkValue0_2);
-        dest.writeFloat(checkValue300);
-        dest.writeFloat(checkValue300_2);
-        dest.writeString(line);
-        dest.writeString(checkDate);
-        dest.writeString(checkWorker);
-        dest.writeByte((byte) (done ? 1 : 0));
-        dest.writeByte((byte) (isTail ? 1 : 0));
-        dest.writeInt(result);
-        dest.writeString(machinetype);
-    }
-
-    @Override
-    public int describeContents() {
-        return 0;
+        result = in.readInt();
+        checkValue0 = in.readFloat();
+        checkValue0A = in.readFloat();
+        checkValue50 = in.readFloat();
+        checkValue50A = in.readFloat();
+        checkValue100 = in.readFloat();
+        checkValue100A = in.readFloat();
+        checkValue150 = in.readFloat();
+        checkValue150A = in.readFloat();
+        checkValue200 = in.readFloat();
+        checkValue200A = in.readFloat();
+        checkValue250 = in.readFloat();
+        checkValue250A = in.readFloat();
+        checkValue300 = in.readFloat();
+        checkValue280 = in.readFloat();
+        checkValue300_2 = in.readFloat();
+        checkValue280_2 = in.readFloat();
+        checkValue250_2 = in.readFloat();
+        checkValue250_2A = in.readFloat();
+        checkValue200_2 = in.readFloat();
+        checkValue200_2A = in.readFloat();
+        checkValue150_2 = in.readFloat();
+        checkValue150_2A = in.readFloat();
+        checkValue100_2 = in.readFloat();
+        checkValue100_2A = in.readFloat();
+        checkValue50_2 = in.readFloat();
+        checkValue50_2A = in.readFloat();
+        checkValue0_2 = in.readFloat();
+        checkValue0_2A = in.readFloat();
     }
 
     public static final Creator<Record> CREATOR = new Creator<Record>() {
@@ -400,5 +392,151 @@ public class Record implements Parcelable {
 
     public void setResult(int result) {
         this.result = result;
+    }
+
+    public float getCheckValue0A() {
+        return checkValue0A;
+    }
+
+    public void setCheckValue0A(float checkValue0A) {
+        this.checkValue0A = checkValue0A;
+    }
+
+    public float getCheckValue50A() {
+        return checkValue50A;
+    }
+
+    public void setCheckValue50A(float checkValue50A) {
+        this.checkValue50A = checkValue50A;
+    }
+
+    public float getCheckValue100A() {
+        return checkValue100A;
+    }
+
+    public void setCheckValue100A(float checkValue100A) {
+        this.checkValue100A = checkValue100A;
+    }
+
+    public float getCheckValue150A() {
+        return checkValue150A;
+    }
+
+    public void setCheckValue150A(float checkValue150A) {
+        this.checkValue150A = checkValue150A;
+    }
+
+    public float getCheckValue200A() {
+        return checkValue200A;
+    }
+
+    public void setCheckValue200A(float checkValue200A) {
+        this.checkValue200A = checkValue200A;
+    }
+
+    public float getCheckValue250A() {
+        return checkValue250A;
+    }
+
+    public void setCheckValue250A(float checkValue250A) {
+        this.checkValue250A = checkValue250A;
+    }
+
+    public float getCheckValue250_2A() {
+        return checkValue250_2A;
+    }
+
+    public void setCheckValue250_2A(float checkValue250_2A) {
+        this.checkValue250_2A = checkValue250_2A;
+    }
+
+    public float getCheckValue200_2A() {
+        return checkValue200_2A;
+    }
+
+    public void setCheckValue200_2A(float checkValue200_2A) {
+        this.checkValue200_2A = checkValue200_2A;
+    }
+
+    public float getCheckValue150_2A() {
+        return checkValue150_2A;
+    }
+
+    public void setCheckValue150_2A(float checkValue150_2A) {
+        this.checkValue150_2A = checkValue150_2A;
+    }
+
+    public float getCheckValue100_2A() {
+        return checkValue100_2A;
+    }
+
+    public void setCheckValue100_2A(float checkValue100_2A) {
+        this.checkValue100_2A = checkValue100_2A;
+    }
+
+    public float getCheckValue50_2A() {
+        return checkValue50_2A;
+    }
+
+    public void setCheckValue50_2A(float checkValue50_2A) {
+        this.checkValue50_2A = checkValue50_2A;
+    }
+
+    public float getCheckValue0_2A() {
+        return checkValue0_2A;
+    }
+
+    public void setCheckValue0_2A(float checkValue0_2A) {
+        this.checkValue0_2A = checkValue0_2A;
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeInt(_id);
+        dest.writeString(orderId);
+        dest.writeString(produceIndex);
+        dest.writeString(orderSuffix);
+        dest.writeString(testIndex);
+        dest.writeInt(level);
+        dest.writeString(line);
+        dest.writeString(checkDate);
+        dest.writeString(checkWorker);
+        dest.writeByte((byte) (done ? 1 : 0));
+        dest.writeByte((byte) (isTail ? 1 : 0));
+        dest.writeString(machinetype);
+        dest.writeInt(result);
+        dest.writeFloat(checkValue0);
+        dest.writeFloat(checkValue0A);
+        dest.writeFloat(checkValue50);
+        dest.writeFloat(checkValue50A);
+        dest.writeFloat(checkValue100);
+        dest.writeFloat(checkValue100A);
+        dest.writeFloat(checkValue150);
+        dest.writeFloat(checkValue150A);
+        dest.writeFloat(checkValue200);
+        dest.writeFloat(checkValue200A);
+        dest.writeFloat(checkValue250);
+        dest.writeFloat(checkValue250A);
+        dest.writeFloat(checkValue300);
+        dest.writeFloat(checkValue280);
+        dest.writeFloat(checkValue300_2);
+        dest.writeFloat(checkValue280_2);
+        dest.writeFloat(checkValue250_2);
+        dest.writeFloat(checkValue250_2A);
+        dest.writeFloat(checkValue200_2);
+        dest.writeFloat(checkValue200_2A);
+        dest.writeFloat(checkValue150_2);
+        dest.writeFloat(checkValue150_2A);
+        dest.writeFloat(checkValue100_2);
+        dest.writeFloat(checkValue100_2A);
+        dest.writeFloat(checkValue50_2);
+        dest.writeFloat(checkValue50_2A);
+        dest.writeFloat(checkValue0_2);
+        dest.writeFloat(checkValue0_2A);
     }
 }
