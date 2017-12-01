@@ -6,7 +6,7 @@
 
     <uses-sdk
         android:minSdkVersion="14"
-        android:targetSdkVersion="23" />
+        android:targetSdkVersion="26" />
 
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -24,6 +24,17 @@
         android:screenOrientation="landscape"
         android:theme="@style/AppTheme">
         <uses-library android:name="android.test.runner" />
+
+        <activity
+            android:name="com.baidu.android.voicedemo.ui.WelcomeActivity"
+            android:configChanges="orientation|keyboardHidden|screenLayout"
+            android:screenOrientation="landscape">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
 
         <activity
             android:name="com.baidu.android.voicedemo.ui.MainActivity"
@@ -44,16 +55,7 @@
             android:name="com.baidu.android.voicedemo.ui.NormalActivity"
             android:configChanges="orientation|keyboardHidden|screenLayout"
             android:screenOrientation="landscape"></activity>
-        <activity
-            android:name="com.baidu.android.voicedemo.ui.WelcomeActivity"
-            android:configChanges="orientation|keyboardHidden|screenLayout"
-            android:screenOrientation="landscape">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
         <activity
             android:name="com.baidu.android.voicedemo.ui.HomeActivity"
             android:configChanges="orientation|keyboardHidden|screenLayout"

@@ -21,7 +21,7 @@ import com.baidu.android.voicedemo.utils.StaticUtils;
 import com.baidu.speech.recognizerdemo.R;
 
 /**
- * A login screen that offers login via email/password.
+ * A register screen that offers login via email/password.
  */
 public class AdminRegisterActivity extends Activity {
 

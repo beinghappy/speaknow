@@ -34,8 +34,6 @@ import org.greenrobot.eventbus.ThreadMode;
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.baidu.speech.recognizerdemo.BuildConfig.isUM;
-
 
 /**
  * 残次品界面:含有残次品和尾货
@@ -73,10 +71,10 @@ public class FailFragment extends Fragment {
                 @Override
                 public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                     //非UM才可以编辑
-                    if(!isUM){
-                        //只有编辑
-                        DialogUtils.showChangeLineDialog(getActivity(), position, failrecordList.get(position));
-                    }
+                    //if(!isUM){
+                    //    //只有编辑
+                    //    DialogUtils.showChangeLineDialog(getActivity(), position, failrecordList.get(position));
+                    //}
                 }
             });
 

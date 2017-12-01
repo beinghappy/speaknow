@@ -25,13 +25,9 @@ import com.baidu.speech.recognizerdemo.R;
  * A login screen that offers login via email/password.
  */
 public class UserLoginActivity extends Activity {
-    // UI references.
     private AutoCompleteTextView mEmailView;
     private EditText mPasswordView;
     private View mLoginFormView;
-
-//    Spinner spinner_produce_class;
-//    Spinner spinner_produce_line;
     private final static String TAG = "login:";
 
     @Override

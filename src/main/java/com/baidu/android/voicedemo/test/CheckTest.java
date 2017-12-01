@@ -1,5 +1,6 @@
 package com.baidu.android.voicedemo.test;
 
+import com.baidu.android.voicedemo.bean.Plan;
 import com.baidu.android.voicedemo.utils.FormatUtils;
 
 import junit.framework.TestCase;
@@ -36,7 +37,10 @@ public class CheckTest extends TestCase{
 
 
     public void testTry(){
-        
+        Plan plan = new Plan();
+        Plan plan2 = new Plan();
+        System.out.println("plan hashcode == "+plan.hashCode());
+        System.out.println("plan2 hashcode == "+plan.hashCode());
 
     }
     public void testWriteExcel(){
