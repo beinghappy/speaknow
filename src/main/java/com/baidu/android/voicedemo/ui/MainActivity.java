@@ -39,9 +39,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     String[] commonArray = {"0","50", "100", "150", "200", "250", "280", "280", "250", "200", "150", "100", "50","0"};
     String[] um_10Array = {"0","50", "100", "150", "200", "250",  "300", "280", "300", "280","250", "200", "150", "100", "50","0"};
+    String[] um_10Array2 = {"0D", "0A","50D","50A",  "100D", "100A", "150D","150A",  "200D", "200A", "250D", "250A",
+            "300D", "280A", "300D", "280A", "250D","250A", "200D","200A", "150D","150A", "100D","100A", "50D","50A", "0D", "0A"};
     String[] checkArrays3 = {"0","50", "100", "150", "200", "250", "299", "299", "250", "200", "150", "100", "50","0"};
     String[] checkArrays4 = {"0","50", "100", "150", "200", "250", "300", "300", "250", "200", "150", "100", "50","0"};
-    String[] checkProject = um_10Array;
+    String[] checkProject = um_10Array2;
 
     private TextView txtStartTV;
 
@@ -152,7 +154,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         if (planType == HomeActivity.CREATE_COMMON) {
             checkProject = commonArray;
         } else if (planType == HomeActivity.CREATE_UM_10) {
-            checkProject = um_10Array;
+            checkProject = um_10Array2;
         } else if (planType == HomeActivity.CREATE_299){
             checkProject = checkArrays3;
         }else{

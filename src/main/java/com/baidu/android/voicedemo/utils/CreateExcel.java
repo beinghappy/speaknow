@@ -133,7 +133,7 @@ public class CreateExcel {
     /**
      * 写入content；使用默认title
      */
-    public void saveDataToExcel(List<Record> content, Plan plan) throws Exception {
+    public void saveDataToExcelold(List<Record> content, Plan plan) throws Exception {
         Label label;
         for (int i = 0; i < title.length; i++) {
             /**Label(x,y,z)其中x代表单元格的第x+1列，第y+1行, 单元格的内容是y
@@ -296,7 +296,7 @@ public class CreateExcel {
     /**
      * 写入content；使用UMtitle
      */
-    public void saveUMDataToExcel(List<Record> content, Plan plan) throws Exception {
+    public void saveDataToExcel(List<Record> content, Plan plan) throws Exception {
         Label label;
         for (int i = 0; i < title.length; i++) {
             /**Label(x,y,z)其中x代表单元格的第x+1列，第y+1行, 单元格的内容是y
@@ -354,6 +354,10 @@ public class CreateExcel {
             //第几次测试。要加1
             index++;
             labeli = new Label(index, i + 1, (Integer.parseInt(record.getTestIndex()) + 1) + "", wcf);
+            sheet.addCell(labeli);
+
+            index++;
+            labeli = new Label(index, i + 1, record.getCheckValue0() + "", wcf);
             sheet.addCell(labeli);
 
             index++;
