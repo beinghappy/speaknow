@@ -1,6 +1,8 @@
 package com.baidu.android.voicedemo.ui;
 
+import android.Manifest;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -22,6 +24,7 @@ public class NormalActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        //保持不熄灭
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON, WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
         setContentView(R.layout.activity_normal);
         btn_admin = (TextView) findViewById(R.id.btn_admin);
@@ -42,7 +45,14 @@ public class NormalActivity extends AppCompatActivity {
                 toUserLogin();
             }
         });
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            requestPermissions(perssion, REQUEST_ID);
+        }
     }
+
+    public static final int REQUEST_ID = 123;
+    String[] perssion = {Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.READ_EXTERNAL_STORAGE};
 
     private void toUserLogin() {
         startActivity(new Intent(this, UserLoginActivity.class));

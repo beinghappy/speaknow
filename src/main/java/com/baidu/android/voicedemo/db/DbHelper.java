@@ -16,8 +16,6 @@ import com.lidroid.xutils.exception.DbException;
 
 import java.util.List;
 
-import static com.baidu.speech.recognizerdemo.BuildConfig.isUM;
-
 /**
  * Created by Administrator on 2016/11/19.
  */
@@ -31,11 +29,7 @@ public class DbHelper implements DbUtils.DbUpgradeListener {
         //本地数据的初始化
         String dir = FileUtils.getDBDir();
         Log.e("tag", "create db on " + dir);
-        if(isUM){
-            db = DbUtils.create(context, dir, StaticUtils.UM_DB_NAME);
-        }else{
-            db = DbUtils.create(context, dir, StaticUtils.DB_NAME);
-        }
+        db = DbUtils.create(context, dir, StaticUtils.DB_NAME);
     }
 
     private static DbHelper dbHelper;

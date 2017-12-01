@@ -25,12 +25,6 @@ public class WelcomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.welcome);
         handler.sendEmptyMessageDelayed(NORMAL,1400);
-//        if(CommonSpUtil.getFirst()){
-//            //第一次进来，则先去设置管理员
-//            handler.sendEmptyMessageDelayed(ADMIN,1400);
-//        }else{
-//            handler.sendEmptyMessageDelayed(LOGIN,1400);
-//        }
     }
 
     private Handler handler = new Handler(){

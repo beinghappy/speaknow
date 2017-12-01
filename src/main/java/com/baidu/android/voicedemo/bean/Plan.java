@@ -211,4 +211,14 @@ public class Plan implements Serializable {
     public void setHasTail(boolean hasTail) {
         this.hasTail = hasTail;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        return super.equals(o);
+    }
+
+    @Override
+    public int hashCode() {
+        return super.hashCode();
+    }
 }
