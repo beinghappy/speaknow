@@ -548,6 +548,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         resultRecord.setCheckValue150(getAvarage(record.getCheckValue150(), f2.getCheckValue150()));
         resultRecord.setCheckValue200(getAvarage(record.getCheckValue200(), f2.getCheckValue200()));
         resultRecord.setCheckValue250(getAvarage(record.getCheckValue250(), f2.getCheckValue250()));
+        //add um A 数据
+        resultRecord.setCheckValue0A(getAvarage(record.getCheckValue0A(), f2.getCheckValue0A()));
+        resultRecord.setCheckValue50A(getAvarage(record.getCheckValue50A(), f2.getCheckValue50A()));
+        resultRecord.setCheckValue100A(getAvarage(record.getCheckValue100A(), f2.getCheckValue100A()));
+        resultRecord.setCheckValue150A(getAvarage(record.getCheckValue150A(), f2.getCheckValue150A()));
+        resultRecord.setCheckValue200A(getAvarage(record.getCheckValue200A(), f2.getCheckValue200A()));
+        resultRecord.setCheckValue250A(getAvarage(record.getCheckValue250A(), f2.getCheckValue250A()));
+
+        //280和300还是用原来的数据
         resultRecord.setCheckValue280(getAvarage(record.getCheckValue280(), f2.getCheckValue280()));
         if (record.getMachinetype().equals(String.valueOf(HomeActivity.CREATE_UM_10))) {
             resultRecord.setCheckValue300(getAvarage(record.getCheckValue300(), f2.getCheckValue300()));
@@ -560,8 +569,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         resultRecord.setCheckValue150_2(getAvarage(record.getCheckValue150_2(), f2.getCheckValue150_2()));
         resultRecord.setCheckValue200_2(getAvarage(record.getCheckValue200_2(), f2.getCheckValue200_2()));
         resultRecord.setCheckValue250_2(getAvarage(record.getCheckValue250_2(), f2.getCheckValue250_2()));
-        resultRecord.setCheckValue280_2(getAvarage(record.getCheckValue280_2(), f2.getCheckValue280_2()));
+        resultRecord.setCheckValue0_2A(getAvarage(record.getCheckValue0_2A(), f2.getCheckValue0_2A()));
+        resultRecord.setCheckValue50_2A(getAvarage(record.getCheckValue50_2A(), f2.getCheckValue50_2A()));
+        resultRecord.setCheckValue100_2A(getAvarage(record.getCheckValue100_2A(), f2.getCheckValue100_2A()));
+        resultRecord.setCheckValue150_2A(getAvarage(record.getCheckValue150_2A(), f2.getCheckValue150_2A()));
+        resultRecord.setCheckValue200_2A(getAvarage(record.getCheckValue200_2A(), f2.getCheckValue200_2A()));
+        resultRecord.setCheckValue250_2A(getAvarage(record.getCheckValue250_2A(), f2.getCheckValue250_2A()));
 
+
+        resultRecord.setCheckValue280_2(getAvarage(record.getCheckValue280_2(), f2.getCheckValue280_2()));
         if (record.getMachinetype().equals(String.valueOf(HomeActivity.CREATE_UM_10))) {
             resultRecord.setCheckValue300_2(getAvarage(record.getCheckValue300_2(), f2.getCheckValue300_2()));
         }
@@ -926,23 +942,38 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             resultRecord.setCheckValue50_2(recordArray[12]);
             resultRecord.setCheckValue0_2(recordArray[13]);
         } else if (planType == HomeActivity.CREATE_UM_10) {
-            resultRecord.setCheckValue0(recordArray[0]);
-            resultRecord.setCheckValue50(recordArray[1]);
-            resultRecord.setCheckValue100(recordArray[2]);
-            resultRecord.setCheckValue150(recordArray[3]);
-            resultRecord.setCheckValue200(recordArray[4]);
-            resultRecord.setCheckValue250(recordArray[5]);
-            resultRecord.setCheckValue280(recordArray[6]);
-            resultRecord.setCheckValue300(recordArray[7]);
+            //只需要改这个
 
-            resultRecord.setCheckValue280_2(recordArray[8]);
-            resultRecord.setCheckValue300_2(recordArray[9]);
-            resultRecord.setCheckValue250_2(recordArray[10]);
-            resultRecord.setCheckValue200_2(recordArray[11]);
-            resultRecord.setCheckValue150_2(recordArray[12]);
-            resultRecord.setCheckValue100_2(recordArray[13]);
-            resultRecord.setCheckValue50_2(recordArray[14]);
-            resultRecord.setCheckValue0_2(recordArray[15]);
+            resultRecord.setCheckValue0(recordArray[0]);
+            resultRecord.setCheckValue0A(recordArray[1]);
+            resultRecord.setCheckValue50(recordArray[2]);
+            resultRecord.setCheckValue50A(recordArray[3]);
+            resultRecord.setCheckValue100(recordArray[4]);
+            resultRecord.setCheckValue100A(recordArray[5]);
+            resultRecord.setCheckValue150(recordArray[6]);
+            resultRecord.setCheckValue150A(recordArray[7]);
+            resultRecord.setCheckValue200(recordArray[8]);
+            resultRecord.setCheckValue200A(recordArray[9]);
+            resultRecord.setCheckValue250(recordArray[10]);
+            resultRecord.setCheckValue250A(recordArray[11]);
+            
+            resultRecord.setCheckValue300(recordArray[12]);
+            resultRecord.setCheckValue280(recordArray[13]);
+            resultRecord.setCheckValue300_2(recordArray[14]);
+            resultRecord.setCheckValue280_2(recordArray[15]);
+
+            resultRecord.setCheckValue250_2(recordArray[16]);
+            resultRecord.setCheckValue250_2A(recordArray[17]);
+            resultRecord.setCheckValue200_2(recordArray[18]);
+            resultRecord.setCheckValue200_2A(recordArray[19]);
+            resultRecord.setCheckValue150_2(recordArray[20]);
+            resultRecord.setCheckValue150_2A(recordArray[21]);
+            resultRecord.setCheckValue100_2(recordArray[22]);
+            resultRecord.setCheckValue100_2A(recordArray[23]);
+            resultRecord.setCheckValue50_2(recordArray[24]);
+            resultRecord.setCheckValue50_2A(recordArray[25]);
+            resultRecord.setCheckValue0_2(recordArray[26]);
+            resultRecord.setCheckValue0_2A(recordArray[27]);
         } else {
             resultRecord.setCheckValue0(recordArray[0]);
             resultRecord.setCheckValue50(recordArray[1]);
